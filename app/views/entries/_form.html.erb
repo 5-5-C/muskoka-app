@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <%= form_for @entry, html: { multipart: true } do |f| %>
+  <%= t.fields_for @entry, html: { multipart: true } do |entry_form| %>
 
     <% if @entry.errors.any? %>
       <div class="error_messages">
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="field col-md-5 col-sm-5 col-xs-11 fake-button">
           <div class="carrierwave-wave-field">
-            <%= f.file_field :avatar, id: "avatar-upload" %>
+            <%= entry_form.file_field :avatar, id: "avatar-upload" %>
             <% if @entry.filter %>
               <%= image_tag @entry.filter, id: "img_prev", class:"img-thumbnail", alt:"your image" %>
             <% elsif @entry.avatar_url %>
@@ -31,13 +31,13 @@
         </div>
 
         <div class="field col-md-6 col-sm-6 col-xs-11">
-          <%= f.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title' %>
+          <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title' %>
           <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
-          <%= f.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box" %><br>
+          <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box" %><br>
           <h4 class="counter">Chars left: <span id="counter_large" data-maximum-story-length="<%= @maximum_story_length %>"><%= @maximum_story_length %></span></h4>
-          <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
-            <%= f.submit 'Submit', class: "button-main edit-button" %>
-          </div>
+          <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
+            <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
+          </div> -->
           <% if current_user && current_user.entry %>
           <div class="delete-entry-container col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7 col-xs-12">
             <%= link_to 'Delete Entry', "/entries/#{@user.entry.id}", method: :delete, data: {confirm: 'Are you sure?'}, class: "button-red delete-entry" %>

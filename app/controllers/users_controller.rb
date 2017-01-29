@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-
+    raise 'hit'
     if @user.update_attributes(user_params)
 
     else
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry_attributes: [:avatar, :title, :story])
   end
 
 end

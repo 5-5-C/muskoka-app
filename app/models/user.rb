@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :terms_of_service, acceptance: true
 
+  accepts_nested_attributes_for :entry, :allow_destroy => true
 end
