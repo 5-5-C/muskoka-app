@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     @user = current_user
 
     if @user.update_attributes(user_params)
-      redirect_to new_entry_url
+
     else
       render :edit
     end
