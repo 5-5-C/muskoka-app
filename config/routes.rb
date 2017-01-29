@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :show, :destroy]
 
+  resources :admin, only: [:new, :create]
+
   patch '/update_user' => 'users#update', as: 'update_user'
 
   resources :entries do
