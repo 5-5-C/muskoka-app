@@ -28,7 +28,7 @@
 <section class="your-adventure">
   <div class="container-fluid">
     <div class="col-md-7">
-      
+
       <div class="bracket-text">
         <h1 style="font-weight: 400;">How do you win?</h1>
 		<h1>Share It Loud And Proud</h1>
@@ -98,7 +98,7 @@
         <div class="col-md-5 col-sm-5">
           <h1 id="enter-now">ENTER TO WIN</h1>
           <p class="below">Sign up below to get started!</p>
-        
+
         </div>
       </div>
     </div>
@@ -138,7 +138,7 @@
             <% if entry.title %>
             <%= entry.title %>
             <% else %>
-            This is my Canada
+            This is our Canada
             <% end %>
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
@@ -156,6 +156,40 @@
     <% end %>
     </div>
     <div class="row flex-md-middle">
+    <% @admin.last(2).each do |admin| %>
+      <div class="col-md-6 image-block" id="admin<%= admin.id %>" data-link="<%= admin_path(admin) %>">
+
+        <% if admin.filter %>
+        <style>
+          #admin<%= admin.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% else %>
+        <style>
+          #admin<%= admin.id %> { background-image: url(<%= admin.image_url %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% end %>
+
+        <%#= image_tag(entry.filter) %>
+        <div class="hover-content-top">
+          <span class="hover-user"><%= admin.name %></span><br>
+          <span class="hover-title"><h3>
+            This is our Canada
+          </h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i></h3></span><br>
+        </div>
+        <div class="hover-content-bottom">
+          <span class="hover-share">SHARE</span><br>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        <div class="hover-content-bottom-right">
+          <%= link_to "SEE MORE", admin_index_path %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+    <div class="row flex-md-bottom">
     <% @entries.offset(2).last(2).each do |entry| %>
       <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
@@ -176,45 +210,7 @@
             <% if entry.title %>
             <%= entry.title %>
             <% else %>
-            This is my Canada
-            <% end %>
-          </h3></span><br>
-          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
-        </div>
-        <div class="hover-content-bottom">
-          <span class="hover-share">SHARE</span><br>
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </div>
-        <div class="hover-content-bottom-right">
-          <%= link_to "SEE MORE", entry_path(entry) %>
-        </div>
-      </div>
-    <% end %>
-    </div>
-    <div class="row flex-md-bottom">
-    <% @entries.offset(4).last(2).each do |entry| %>
-      <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
-
-        <% if entry.filter %>
-        <style>
-          #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
-        </style>
-        <% else %>
-        <style>
-          #image<%= entry.id %> { background-image: url(<%= entry.avatar_url %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
-        </style>
-        <% end %>
-
-        <%#= image_tag(entry.filter) %>
-        <div class="hover-content-top">
-          <span class="hover-user"><%= entry.user.name %></span><br>
-          <span class="hover-title"><h3>
-            <% if entry.title %>
-            <%= entry.title %>
-            <% else %>
-            This is my Canada
+            This is our Canada
             <% end %>
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>

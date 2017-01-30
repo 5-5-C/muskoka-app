@@ -2,6 +2,8 @@ class AdminController < ApplicationController
 
   def new
     @admin = Admin.new
+    @maximum_title_length = Entry.validators_on( :title ).first.options[:maximum]
+    @maximum_story_length = Entry.validators_on( :story ).first.options[:maximum]
   end
 
   def create
@@ -12,6 +14,10 @@ class AdminController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def show
+    @admin = Admin.find(params[:id])
   end
 
   private
