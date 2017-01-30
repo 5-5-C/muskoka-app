@@ -80,7 +80,7 @@ $darkgrey: #2c2d2d;
   padding-top: 40px;
   overflow: hidden;
   position: relative;
-  height: 600px;
+  height: 660px;
 
   &:before {
     background-color: rgba(0, 0, 0, 0.29);
@@ -221,6 +221,7 @@ textarea {
     padding-top: 50px;
   }
   .entry-top {
+    height: 810px;
     h2 {
     color: white;
     }

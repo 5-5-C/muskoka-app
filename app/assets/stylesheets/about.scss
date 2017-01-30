@@ -9,6 +9,106 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 
 
+// INTRO CONTAINER
+
+.textpadbackground {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+    background-color: rgba(0,0,0,.70);
+    background-size: cover;
+    border: 10vh solid transparent;
+    border-image: url('http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png') 20% repeat;
+}
+
+.intro-text-wrapper {
+  margin-top: 30vh;
+}
+
+.intro-container {
+  // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  background-position: center;
+  text-align: center;
+}
+
+
+// PANEL ONE - EXPLORE MORE
+
+.exploremore {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:20vh;
+}
+
+// PANEL TWO - PAMPERED WILDERNESS
+
+.pamperedwilderness {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485721117/19482001159_d895d8265c_o_mz83jw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+
+// PANEL THREE - CAMPING & GLAMPING
+
+.glamping {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722274/Glamping_32_tz0ov6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+
+// PANEL FOUR - PADDLING
+
+.paddling {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485721117/8735353223_02ddb224d4_o_ogleh7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+
+// PLANEL FIVE - OUTDOOR ADVENTURE
+
+.outdooradventure {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+
+// PANEL SIX - CRAFT BEER & WINE
+
+.craftbeer {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485721117/7597970362_1b13ddaa62_o_ts8nfd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+// PANEL SEVEN - GOLF
+
+.golf {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485721119/23121150016_b2ee84b6e1_o_wnrj7d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100vh;
+}
+
+
 .about-main {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
   h1, h3, p {
@@ -20,23 +120,6 @@ $secondary4: #e5e3e3;
     font-weight: 700;
     font-size: 50px;
   }
-}
-
-.text-column {
-  margin-top: 50px;
-}
-
-.wood-column {
-  padding: 15px 30px !important;
-  // background: white;
-  border-radius: 10px;
-  h3, h1 {
-    color: white;
-  }
-}
-
-.centered-polaroid {
-  text-align: center;
 }
 
 .about-section-one {
@@ -56,11 +139,12 @@ $secondary4: #e5e3e3;
 }
 
 .about-intro {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483464779/qonxfggeudzrt57xbl2u.png");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485726877/cliffjump_gomqsq.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
   background-attachment: fixed;
+  height:100vh;
   h1 {
     margin-top: 0;
     text-transform: uppercase;
@@ -113,53 +197,5 @@ $secondary4: #e5e3e3;
       top: 0;
       width: 100%;
       height: 100%;
-  }
-}
-
-// .about-stay {
-//     border-top: 21px solid rgba(47, 47, 46, 0.1);
-// }
-
-.intro-text-wrapper {
-  margin-top: 150px;
-}
-
-.intro-container {
-  // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 600px;
-  background-position: center;
-  text-align: center;
-}
-
-@media (min-width: 991px) {
-  .about-paddle {
-    .text-column {
-      margin-top: 70px;
-    }
-  }
-
-}
-
-@media (max-width: 990px) {
-  .text-column {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .polaroid {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 767px) {
-  .text-column {
-    margin: 0;
-  }
-}
-
-@media (max-width: 550px) {
-  .intro-container {
-    margin-bottom: 150px;
   }
 }

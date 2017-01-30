@@ -69,4 +69,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
 
   }
 
+  // $('#update-user-submit').on('click',function(){
+  //   $('.story-submit').trigger('click')
+  // });
 });
