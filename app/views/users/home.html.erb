@@ -1,52 +1,51 @@
 
 
-  <section class="top-section">
-    <div class="container">
-      <div class="row">
-        <div class="logo col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-          <div class="hero-images">
-            <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
-          </div>
-        </div>
-      </div>
-      <div class="enter-now-container">
-        <a class="button-main" id="hero-button" href="#enter-now">ENTER NOW</a>
-      </div>
-        <!-- <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-4 enter-now-container">
-          <a class="button-main" id="hero-button" href="#enter-now">ENTER NOW</a>
-        </div> -->
-    </div>
-  </section>
+<section class="top-section">
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-4">
+				<div class="hero-images">
+					<img src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg" alt="Rto12logo angled 01 a4euwt">
+				</div>
+			</div>
+			<div class="col-md-offset-1 col-md-5">
+				<div class="homepadborder">
+					<h1 class="herowhiteh1">SHARE YOUR CANADA WITH THE WORLD</h1>
+					<h4 class="herowhiteh4">Greetings fellow Canucks!</h4>
+					<h4 class="herowhiteh4">In case you didn’t get the memo with the latest care package of maple syrup and ketchup chips, July 1st will mark the 150th anniversary of Canada.</h4>
+					<h4 class="herowhiteh4">Explorers’ Edge wants to bring one lucky Canadian ex-pat back home to celebrate Canada’s 150th with us in the wilderness north of Toronto and heck – because we’re all so nice – how about a few friends from your new country tag along too?</h4>
+					<h4 class="herowhiteh4">Share your passion for Canada with the world and you could be headed home for an incredible week of very Canadian adventures – on us!</h4>
+					<h2 class="herowhiteh2">Share your story now. Start by entering your email!</h2>
+						<div class="signup-form">
+							<%= render 'form' %>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <section class="your-adventure">
-    <div class="brackets col-md-7 col-md-offset-1 col-sm-8 col-xs-8">
-      <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483453823/Section2_Brackets-01_x2wsgv.png") %>
+<section class="your-adventure">
+  <div class="container-fluid">
+    <div class="col-md-7">
+      
       <div class="bracket-text">
-        <h1>YOUR CANADA.<br>
-            YOUR ADVENTURE.</h1>
-        <h3>For Canada’s 150th, Explorer’s Edge is challenging Canadian expats to show their pride, show us your home, and show us your Canada.<br>
-        Share your favourite true north memory for a chance to win a vacation for 4 back to the great Canadian wilderness in Muskoka. Celebrate Canada’s 150th with us.<br>
-        <a href="#" class="text-link-emphasis">Click here</a> for complete details and terms of entry.</h3>
-      </div>
+        <h1 style="font-weight: 400;">How do you win?</h1>
+		<h1>Share It Loud And Proud</h1>
+		<h3>Upload your photos and stories of your favourite times spent in the great Canadian wilderness – then SHARE ON SOCIAL WITH YOUR NEW FRIENDS IN YOUR NEW COUNTRY.</h3>
+		<h3>Five finalists will be selected from the most number of votes – and the GRAND PRIZE winner of the Canada 150 Vacation will be chosen among them by Explorers’ Edge!</h3>
+		<h3>All finalists &amp; participants will be chosen throughout the contest to receive a custom care packages from Explorers’ Edge!</h3>
+		<h3><a href="#enter" class="button-main">Enter Your Story</a><a href="#vote" class="button-main">Vote for your favourite Canadian Story</a>
+	  </div>
     </div>
+  </div>
   </section>
 
-  <section class="how-to-win">
-    <div class="container">
-      <div class="row wrapper">
-        <div class="col-md-5 col-sm-12">
-          <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119561/RTO_Ad_Campaign_Version3_Rough_01-03_jf569r.jpg", class:"polaroid-home") %>
-        </div>
-        <div class="col-md-7 col-sm-12">
-          <h1>How do you win?</h1>
-          <h3>It's Canada's year. And we need you to tell the world.</h3>
-          <p>We are looking for Canada's greatest export. You are the Canadian living abroad who still remembers summers spent on the lake and falls spent canoeing through the foliage. We're compiling Canadian stories about what makes Canada great- what makes it <em>your</em> Canada.</p>
-          <br>
-          <h3 class="prize">The entry with the most votes will win a vacation for 4 to the great Canadian wilderness in Muskoka!<h3>
-        </div>
-      </div>
+<section class="more-posts">
+    <div class="container-fluid">
+		<h1 style="text-align:center;margin:5vh;">Vote for Your Favourite Canadian Story</h1>
     </div>
-  </section>
+</section>
 
   <section class="enter-to-win">
     <div class="container">
@@ -99,9 +98,7 @@
         <div class="col-md-5 col-sm-5">
           <h1 id="enter-now">ENTER TO WIN</h1>
           <p class="below">Sign up below to get started!</p>
-          <div class="signup-form">
-            <%= render 'form' %>
-          </div>
+        
         </div>
       </div>
     </div>
@@ -246,9 +243,9 @@
     <div class="container">
       <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1>This is Our Canada – This is Our True North</h1>
-        <h3>How do we experience Canada? We’ve rounded up the best true north experience.<br><br>
-        Sign up now to learn how you can relive your best-cherished memories.</h3>
+        <h1>The Great Canadian Wilderness: See For Yourself</h1>
+        <h3>We don’t want to brag (actually we’re not allowed to – we’re Canadian) but one of the most beautiful places you’ll ever visit is the wilderness just north of Toronto.</h3>
+		<h3>Want to learn more about this (very) Canadian region? Sign up for our travel tips newsletter.</h3>
         <div class="field footer-input">
           <input placeholder="Email">
         </div>

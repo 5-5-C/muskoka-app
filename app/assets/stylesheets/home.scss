@@ -13,12 +13,37 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 $darkgrey: #2c2d2d;
 
+
+.homepadborder {
+	margin-top: 10vh;
+    background-color: rgba(0,0,0,0.7);
+    background-size: cover;
+    border: 10vh solid transparent;
+    border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
+}
+
+.herowhiteh1 {
+	color:#FFFFFF;
+	font-weight:900;
+}
+.herowhiteh2 {
+	color:#FFFFFF;
+	font-weight:900;
+	text-align:center;
+	margin-bottom:5vh;
+}
+.herowhiteh4 {
+	color:#FFFFFF;
+}
+
+
+
 .top-section {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407510/MainSection_Background_kiehbd.jpg");
-  height: 700px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: bottom;
 }
 
 #hero-button {
@@ -55,6 +80,7 @@ $darkgrey: #2c2d2d;
 
 .hero-images {
   overflow: hidden;
+  margin-top:30vh;
 }
 
 .logo {
@@ -74,10 +100,9 @@ $darkgrey: #2c2d2d;
 }
 
 .bracket-text {
-  position: absolute;
-  top: 15%;
-  left: 16%;
-  width: 55%;
+		background-size: cover;
+		border: 10vh solid transparent;
+		border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
   h1 {
     color: white;
     font-size: 4.5rem;
@@ -94,11 +119,11 @@ $darkgrey: #2c2d2d;
 }
 
 .your-adventure {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg");
-  height: 600px;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+	background-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg);
+	height: 75vh;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 .your-adventure:before {
@@ -188,8 +213,7 @@ $darkgrey: #2c2d2d;
 .signup-form {
   display: block;
   margin: auto;
-  width: 85%;
-  padding-bottom: 90px;
+  width: 100%;
 }
 
 .field input {
@@ -398,7 +422,6 @@ $darkgrey: #2c2d2d;
 
 .more-posts {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
-  height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
