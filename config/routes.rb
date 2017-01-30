@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :show, :destroy]
 
-  resources :admin, only: [:new, :create]
+  resources :admin, only: [:new, :create, :show]
 
   patch '/update_user' => 'users#update', as: 'update_user'
 

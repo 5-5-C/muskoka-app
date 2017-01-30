@@ -150,7 +150,7 @@ $darkgrey: #2c2d2d;
   height: 40px;
 }
 
-.entry-show-main {
+.entry-show-main, .admin-show-main {
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -168,6 +168,8 @@ $darkgrey: #2c2d2d;
     height: 600px;
   }
 }
+
+
 
 .this-is img {
   max-width: 250px;

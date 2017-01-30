@@ -16,6 +16,10 @@ class AdminController < ApplicationController
     end
   end
 
+  def show
+    @admin = Admin.find(params[:id])
+  end
+
   private
   def admin_params
     params.require(:admin).permit(:name, :story, :image, :filter, :title)

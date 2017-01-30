@@ -157,7 +157,7 @@
     </div>
     <div class="row flex-md-middle">
     <% @admin.last(2).each do |admin| %>
-      <div class="col-md-6 image-block" id="admin<%= admin.id %>" data-link="<%= admin_index_path %>">
+      <div class="col-md-6 image-block" id="admin<%= admin.id %>" data-link="<%= admin_path(admin) %>">
 
         <% if admin.filter %>
         <style>
