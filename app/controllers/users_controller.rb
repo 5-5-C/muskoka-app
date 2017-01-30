@@ -49,8 +49,11 @@ class UsersController < ApplicationController
     @user = current_user
     @entry = Entry.new(user_params["entry"])
     @entry.user_id = current_user.id
-    if @user.update_attributes(only_user_params) && @entry.save
-      redirect_to user_url(current_user)
+    if @user.update_attributes(only_user_params)
+      @entry.name = current_user.name
+      if @entry.save
+        redirect_to user_url(current_user)
+      end
     else
       render :edit
     end
