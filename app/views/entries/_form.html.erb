@@ -31,9 +31,9 @@
         </div>
 
         <div class="field col-md-6 col-sm-6 col-xs-11">
-          <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title' %>
+          <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title', :class => "black-text" %>
           <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
-          <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box" %><br>
+          <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
           <h4 class="counter">Chars left: <span id="counter_large" data-maximum-story-length="<%= @maximum_story_length %>"><%= @maximum_story_length %></span></h4>
           <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
             <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
