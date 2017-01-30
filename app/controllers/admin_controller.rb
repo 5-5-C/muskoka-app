@@ -1,11 +1,11 @@
 class AdminController < ApplicationController
 
   def new
-    #code
+    @admin = Admin.new
   end
 
   def create
     #code
   end
-  
+
 end
