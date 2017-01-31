@@ -32,6 +32,8 @@ gem 'mini_magick', '~> 4.3'
 #
 gem 'cloudinary'
 
+gem 'shareable'
+
 gem "lazyload-rails"
 
 gem "figaro"

@@ -3,7 +3,7 @@ $( document ).on('turbolinks:load', function() {
   // if (window.location.href.indexOf("entries") > -1) {
   //   $(".navbar-right").addClass("dark-nav");
   // }
-
+$('.prettySocial').prettySocial();
 
 
   // showing image preview
