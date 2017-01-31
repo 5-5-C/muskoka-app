@@ -193,3 +193,17 @@ $secondary4: #e5e3e3;
       height: 100%;
   }
 }
+
+@media (max-width: 1030px) {
+
+	.intro-text-wrapper {
+		padding: 6vh;
+	}
+}
+
+@media (max-width: 770px) {
+
+	.textpadbackground {
+		border-width: 6vh;
+	}
+}
