@@ -468,3 +468,32 @@ $darkgrey: #2c2d2d;
 		text-align: center;
 }
 //media quieries for home page
+@media (max-width: 1200px) {
+	.tourism-bottom h1 {
+		padding-top: 42px;
+	}
+}
+
+
+@media (max-width: 990px) {
+	.hero-images {
+		margin-top: 5vh;
+	}
+
+	.homepadborder {
+		border-width: 7vh;
+		margin-top: 4vh;
+	}
+
+	.vote-canada-button {
+		font-size: 1.6rem;
+	}
+
+	.board-text h2 {
+		font-size: 3rem;
+	}
+
+	.board-text h1 {
+		font-size: 4rem;
+	}
+}
