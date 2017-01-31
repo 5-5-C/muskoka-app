@@ -272,7 +272,7 @@ $darkgrey: #2c2d2d;
 
 .board-text {
   position: absolute;
-  margin-top: 200px;
+  padding-top: 200px;
   text-align: center;
   h1 {
     text-align: center;
@@ -468,3 +468,132 @@ $darkgrey: #2c2d2d;
 		text-align: center;
 }
 //media quieries for home page
+@media (max-width: 1200px) {
+	.tourism-bottom h1 {
+		padding-top: 42px;
+	}
+}
+
+
+@media (max-width: 990px) {
+	.hero-images {
+		margin-top: 5vh;
+	}
+
+	.homepadborder {
+		border-width: 7vh;
+		margin-top: 4vh;
+	}
+
+	.board-text h2 {
+		font-size: 3rem;
+	}
+
+	.board-text h1 {
+		font-size: 4rem;
+	}
+}
+
+@media (min-width: 761px) and (max-width: 990px) {
+	.vote-canada-button {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+	.vote-canada-button {
+		font-size: 1.2rem;
+	}
+
+	.vote-canada-button-top {
+		font-size: 1.4rem;
+	}
+
+	.bracket-text {
+		border-width: 6vh;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.green-board {
+		background-size: 100%;
+	}
+
+	.hero-images {
+		margin-top: 9vh;
+	}
+
+	.homepadborder {
+		border-width: 4vh;
+		margin-top: 1vh;
+	}
+
+	.herowhiteh1 {
+		font-size: 2rem;
+		margin-top: 0px;
+	}
+
+	.herowhiteh4 {
+		font-size: 1.4rem;
+	}
+
+	input.email {
+		height: 3rem;
+	}
+
+	.actions input {
+		font-size: 1.5rem;
+	}
+
+	.bracket-text {
+		border-width: 4vh;
+	}
+
+	.bracket-text h1 {
+		font-size: 2.2rem;
+	}
+
+	.bracket-text h3 {
+		font-size: 1.5rem;
+	}
+
+	.vote-canada-button-top {
+		font-size: 0.81rem;
+		padding: 5px 12px;
+	}
+
+	.tourism-bottom h1 {
+		font-size: 2.5rem;
+		padding-bottom: 0;
+	}
+
+	.tourism-bottom h3 {
+		font-size: 2rem;
+	}
+
+	.green-board {
+		background-image: none;
+	}
+
+	.board-text {
+		margin-top: 0;
+	}
+
+	.board-text h2 {
+		font-size: 5.5rem;
+	}
+
+	.vote-canada-button {
+		font-size: 0.92rem;
+		padding: 8px 12px;
+	}
+
+	.board-text {
+		padding-top: 100px;
+	}
+
+	.footer h4 {
+		font-size: 1.3rem;
+	}
+}
