@@ -30,10 +30,11 @@ ActiveRecord::Schema.define(version: 20170130010940) do
     t.text     "story"
     t.integer  "user_id"
     t.string   "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "filter"
     t.string   "title"
+    t.string   "filter_no_hashtag"
   end
 
   create_table "users", force: :cascade do |t|

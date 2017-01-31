@@ -3,7 +3,7 @@ $( document ).on('turbolinks:load', function() {
   // if (window.location.href.indexOf("entries") > -1) {
   //   $(".navbar-right").addClass("dark-nav");
   // }
-
+$('.prettySocial').prettySocial();
 
 
   // showing image preview
@@ -29,7 +29,7 @@ $( document ).on('turbolinks:load', function() {
 
 
 
-if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length === 0 && $('buttons-container').length > 0 ) {
+if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length === 0 ) {
     // get the url of the entry image
     const URL = $('#entry_image img').attr('src');
     console.log(URL);
@@ -47,6 +47,8 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
       // add the filter to the middle of it
       var filtered = FIRST + "upload/w_300,g_north_west,x_20,y_20,l_MyCanada-01_copy_sc33qn/" + filterName + LAST
 
+      var filtered_no_hashtag = FIRST + "upload/" + filterName + LAST
+
       // assign it to the image
       $('#entry_image img').attr('src', filtered );
 
@@ -59,6 +61,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
 
 
       $('#hidden-filter-send').val(newUrl);
+      $('#hidden-filter-no-hashtag').val(filtered_no_hashtag);
 
 
     });

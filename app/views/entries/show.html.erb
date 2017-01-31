@@ -1,3 +1,11 @@
+<% content_for :head do %>
+  <meta property="og:type"   content="sdff:post" />
+  <meta property="og:url"    content="<%= "localhost:3000" + entry_path(@entry) %>" />
+  <meta property="og:title"  content="This is <%= @entry.name %>'s Canada'" />
+  <meta property="og:image"  content="<%= @entry.filter %>" />
+<% end %>
+
+
 <div class="container-fluid entry-show-main">
 
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 this-is">
@@ -54,9 +62,8 @@
   <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 voting status">
     <div class="vote-count row">
       <span class="hover-share">SHARE</span><br>
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-      <i class="fa fa-facebook" aria-hidden="true"></i>
-      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@entry) %>" data-type="facebook" data-description="This is <%= @entry.name %>'s Canada" data-media="<%= @entry.filter %>"></a>
+      <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@entry) %>" data-type="twitter" data-description="This is <%= @entry.name %>'s Canada" data-media="<%= @entry.filter %>"></a>
       <h2>Total Votes: <%= @entry.votes.where(email_confirmed: true).count %></h2>
     <% if current_user && current_user.entry == @entry %>
       <h3><em>This is your submission</em></h3>
