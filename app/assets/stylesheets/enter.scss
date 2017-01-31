@@ -18,7 +18,7 @@ $darkgrey: #2c2d2d;
 }
 
 .entry-row {
-  padding-top: 150px;
+  padding-top: 75px;
 }
 
 .photo-column {
@@ -254,6 +254,21 @@ textarea {
   padding: 2px 6px 3px;
 }
 
+@media (max-width: 1200px) {
+  .vertical-text {
+    font-size: 4rem;
+  }
+
+  .entry-row {
+    padding-top: 50px;
+  }
+
+  .upload-label {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 767px) {
   .edit-photo {
     padding-top:50px;
@@ -269,5 +284,20 @@ textarea {
   }
   .vertical-text {
     margin-top: 30px !important;
+  }
+
+  h1.vertical-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .name-field {
+    width: 270px !important;
+  }
+
+  img.polaroid-home {
+    max-width: 100%;
   }
 }
