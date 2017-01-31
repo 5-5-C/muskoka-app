@@ -36,7 +36,9 @@ $darkgrey: #2c2d2d;
 	color:#FFFFFF;
 }
 
-
+.your-adventure-button-bottom {
+	margin-top: 40px;
+}
 
 .top-section {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
@@ -115,12 +117,16 @@ $darkgrey: #2c2d2d;
   h3 {
     color: white;
     font-family: $font-regular;
+		font-size: 2rem;
   }
+}
+
+.your-adventure-button-top {
+	margin-bottom: 40px;
 }
 
 .your-adventure {
 	background-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg);
-	height: 75vh;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -240,7 +246,7 @@ $darkgrey: #2c2d2d;
 
   input {
     border: 3px solid $secondary4;
-    background: #949494;
+    background: red;
     border-radius: 5px;
     color: $secondary4;
     padding: 6px 16px;
@@ -430,8 +436,11 @@ $darkgrey: #2c2d2d;
 
 
 .tourism-bottom {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
   height: 550px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
     h1 {
       margin-top: 0;
       padding: 80px 0 40px;
@@ -453,294 +462,9 @@ $darkgrey: #2c2d2d;
     }
 }
 
+.overlay {
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 100%;
+		text-align: center;
+}
 //media quieries for home page
-
-@media (min-width: 2250px) {
-  .bracket-text {
-    width: 45%;
-    left: 9%
-  }
-}
-
-@media (min-width: 2000px) and (max-width: 2249px) {
-  .bracket-text {
-    width: 56%;
-    margin-top: 20px;
-    left: 12%;
-  }
-}
-
-@media (min-width: 2001px) {
-  .green-board {
-    height: 700px;
-    background-size: 54%;
-  }
-  .board-text {
-    h2 {
-      font-size: 7rem;
-    }
-    h1 {
-      font-size: 9rem;
-    }
-  }
-  .all-images a img {
-    max-width: 800px;
-  }
-  .button-main {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 2000px) {
-  .green-board {
-    background-size: 60%;
-  }
-}
-
-@media (max-width: 1800px) {
-  .bracket-text {
-    width: 63%;
-  }
-}
-
-@media (max-width: 1600px) {
-  .green-board {
-    height: 500px;
-  }
-  .board-text {
-    margin-top: 150px;
-  }
-}
-
-@media (max-width: 1500px) {
-  .bracket-text {
-    width: 77%;
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .board-text {
-   h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 4rem;
-  }
- }
-}
-
-@media (min-width: 1300px) {
-  .bracket-text {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .board-text {
-    margin-top: 110px;
-  }
-  .green-board {
-    height: 400px;
-  }
-  .board-text {
-    h2 {
-    font-size: 3.5rem;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-  }
-  .bracket-text {
-    margin-left: 35px;
-  }
-
-}
-
-@media (max-width: 1070px) {
-  .bracket-text {
-    width: 80%;
-    h1 {
-      margin-bottom: 0;
-    }
-    h3 {
-      margin-top:0;
-    }
-  }
-}
-
-@media (max-width: 990px) {
-  .board-text {
-    margin-top: 0px;
-    padding-top: 120px;
-  }
-  .green-board {
-    margin: 0;
-    background-size: 72%;
-  }
-  .bracket-text {
-    margin-left: 45px;
-  }
-  // .enter-now-container {
-  //   padding-left: 50px !important;
-  // }
-}
-
-@media (max-width: 855px) {
-  .bracket-text {
-    width: 90%;
-  }
-  .brackets img {
-    width:150%;
-  }
-  .bracket-text h3 {
-    font-size: 2.6vw;
-  }
-  .bracket-text h1 {
-    font-size: 5vw;
-  }
-  .your-adventure {
-    height: 520px;
-  }
-}
-
-@media (max-width: 767px) {
-  .your-adventure {
-    height: 480px;
-  }
-  .bracket-text {
-    width: 80%;
-  }
-  .rules {
-    padding-top: 60px;
-    p {
-      font-size: 17px;
-    }
-  }
-  .enter-to-win .below {
-      font-size: 17px;
-  }
-  .green-board {
-    background-size: 85%;
-  }
-  #enter-now {
-    padding-top:50px;
-  }
-}
-
-@media (max-width: 660px) {
-  .top-section {
-    height: 560px;
-  }
-  .logo img {
-    top: 100px;
-  }
-  #hero-button {
-    margin-top: 440px;
-  }
-  .your-adventure {
-    height: 442px;
-  }
-  .brackets {
-    margin-top: 30px;
-  }
-  .green-board {
-    background-size: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .your-adventure {
-    height: 410px;
-  }
-}
-
-
-@media (max-width: 550px) {
-  .top-section {
-    height: 500px;
-  }
-  #hero-button {
-    margin-top: 375px;
-  }
-  .bracket-text h1 {
-    margin-top: 10px;
-
-  }
-  .bracket-text {
-    width: 92%;
-  }
-  .brackets {
-    margin-top:45px;
-  }
-  .brackets img {
-    display: none;
-  }
-  .bracket-text {
-    h1 {
-      font-size: 30px;
-    }
-    h3 {
-      font-size: 18px;
-    }
-  }
-  .board-text {
-    h2 {
-      font-size: 5.5vw;
-    }
-    h1 {
-      font-size: 7vw;
-    }
-  }
-  .enter-to-win h1 {
-    font-size: 8vw;
-  }
-  .tourism-bottom {
-    height: 740px;
-  }
-}
-
-@media (max-width: 510px) {
-  .your-adventure {
-    height: 480px;
-  }
-}
-
-@media (max-width: 450px) {
-  .green-board {
-    height: 300px;
-  }
-  .brackets {
-    padding: 0 !important;
-  }
-  .board-text {
-    padding-top: 80px;
-    h1 {
-      margin: 0;
-      margin-bottom: 20px;
-    }
-  }
-  .bracket-text {
-    width: 100%;
-    margin: 0 10px;
-    // h3 {
-    //   font-size: 3.0vw;
-    //   width: 113%;
-    // }
-  }
-  .button-main {
-    font-size: 1.5rem;
-  }
-  .row-first {
-    margin-top: 30px;
-  }
-  .footer h4 {
-    font-size: 13px;
-  }
-  .navbar-brand img {
-    width: 90px !important;
-  }
-  .how-to-win {
-    color: white;
-  }
-}

@@ -21,7 +21,7 @@ $secondary4: #e5e3e3;
 }
 
 .intro-text-wrapper {
-  margin-top: 30vh;
+  padding: 10vh;
 }
 
 .intro-container {
@@ -51,7 +51,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 
@@ -62,7 +61,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 
@@ -73,7 +71,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 
@@ -84,7 +81,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 
@@ -95,7 +91,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 // PANEL SEVEN - GOLF
@@ -105,7 +100,6 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height:100vh;
 }
 
 
@@ -144,13 +138,12 @@ $secondary4: #e5e3e3;
   background-size: cover;
   padding: 50px 0;
   background-attachment: fixed;
-  height:100vh;
   h1 {
     margin-top: 0;
     text-transform: uppercase;
     color: white;
   }
-  &:before {
+  &:before { 	
     background-color: rgba(35, 35, 39, 0.5);
     content: "";
     position: absolute;
