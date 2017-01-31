@@ -31,15 +31,18 @@ $darkgrey: #2c2d2d;
 }
 
 .already-submitted {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
+  background-position: bottom;
   h1 {
     color: $secondary4;
   }
 }
 
 .already-submit-row {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(0,0,0,0.3);
+  height: 100%;
 }
 
 .row-wrapper {

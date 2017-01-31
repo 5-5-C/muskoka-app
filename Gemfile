@@ -34,6 +34,7 @@ gem 'cloudinary'
 
 gem "lazyload-rails"
 
+gem "figaro"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
