@@ -194,10 +194,14 @@ $secondary4: #e5e3e3;
   }
 }
 
+h1.explore-heading {
+	margin-top: 7vh;
+}
+
 @media (max-width: 1030px) {
 
 	.intro-text-wrapper {
-		padding: 6vh;
+		padding: 6.4vh;
 	}
 }
 
@@ -205,5 +209,36 @@ $secondary4: #e5e3e3;
 
 	.textpadbackground {
 		border-width: 6vh;
+	}
+}
+
+
+@media (max-width: 600px) {
+	.about-intro {
+		h1 {
+			font-size: 2rem;
+		}
+
+		h3 {
+			font-size: 1.3rem;
+			margin-top: 10px;
+		}
+	}
+
+	.intro-text-wrapper {
+		padding-top: 13vh;
+	}
+
+	a.about-top-button {
+		font-size: 0.78rem;
+		padding: 5px 10px;
+	}
+
+	.explore-heading {
+		margin-top: 1vh;
+	}
+
+	.about-main h1 {
+		font-size: 4rem;
 	}
 }
