@@ -21,9 +21,8 @@ $( document ).on('turbolinks:load', function() {
 
         $("#avatar-upload").change(function(){
           console.log("changing");
-          $('#img_prev').removeClass('hidden');
-          readURL(this);
-          $('#camera-upload').css("display", "none");
+          $(".upload-label").empty();
+          $(".upload-label").append("Upload Complete");
         });
 
 
