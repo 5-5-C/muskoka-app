@@ -98,7 +98,6 @@ $darkgrey: #2c2d2d;
   color: #f1e5e6;
   background-color: #d3394c;
   margin-top: 80px;
-  margin-right: 235px;
 }
 
 .entry-top {
@@ -206,8 +205,11 @@ textarea {
 }
 
 #avatar-upload {
-  height: 400px;
+  height: 61px;
+  width: 100%;
+  padding-left: 0px;
   position: absolute;
+  bottom: 10px;
 }
 
 .fake-button {
@@ -250,9 +252,11 @@ textarea {
 .step-3 {
   margin-top: 50px;
 }
+
 .edit-button {
   padding: 2px 6px 3px;
 }
+
 
 @media (max-width: 1200px) {
   .vertical-text {
@@ -268,6 +272,19 @@ textarea {
     margin-right: 0;
   }
 }
+
+// @media (max-width: 1200px) and (min-width: 991px) {
+//   #avatar-upload {
+//     top: 48px;
+//   }
+// }
+
+// @media (max-width: 990px) {
+//   #avatar-upload {
+//     bottom: 9px;
+//     left: 270px;
+//   }
+// }
 
 @media (max-width: 767px) {
   .edit-photo {

@@ -43,7 +43,7 @@
         <div class="field col-md-4 fake-button">
           <div class="carrierwave-wave-field">
             <%= entry_form.label 'avatar', 'Upload file', class: "upload-label" %>
-            <%= entry_form.file_field :avatar %>
+            <%= entry_form.file_field :avatar, id: "avatar-upload" %>
             <% if @entry.filter %>
               <%= image_tag @entry.filter, id: "img_prev", class:"img-thumbnail", alt:"your image" %>
             <% elsif @entry.avatar_url %>
