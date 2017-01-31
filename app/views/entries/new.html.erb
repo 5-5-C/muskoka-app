@@ -2,10 +2,10 @@
 <div class="entry-instructions">
   <div class="container-fluid entry-top">
     <div class="row entry-row">
-      <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 photo-column">
+      <div class="col-lg-3 col-lg-offset-1 photo-column">
         <img id="suyc-entry" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
       </div>
-      <div class="col-sm-6">
+      <div class="col-lg-6">
         <h1 class="vertical-text">ENTER TO WIN A 1 WEEK VACATION FOR 4 FRIENDS TO THE GREAT CANADIAN WILDERNESS NORTH OF TORONTO!</h1>
         <h2 class="center-text">Step 1: Tell us your name and select a password:</h2>
         <div class="user-form">
@@ -40,7 +40,7 @@
         <div class="col-md-4 col-sm-12 photo-column">
           <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119561/RTO_Ad_Campaign_Version3_Rough_01-03_jf569r.jpg", class:"polaroid-home") %>
         </div>
-        <div class="field col-md-4 col-sm-5 col-xs-11 fake-button">
+        <div class="field col-md-4 fake-button">
           <div class="carrierwave-wave-field">
             <%= entry_form.label 'avatar', 'Upload file', class: "upload-label" %>
             <%= entry_form.file_field :avatar %>
@@ -98,7 +98,7 @@
                 <i class="fa fa-pencil-square-o" aria-hidden="true" id="camera-upload"></i>
               </div>
 
-              <div class="field col-md-offset-1 col-md-5 col-sm-6 col-xs-11">
+              <div class="field col-md-offset-1 col-md-5">
                 <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title', :class => "black-text" %>
                 <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
                 <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
