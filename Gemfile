@@ -32,6 +32,7 @@ gem 'mini_magick', '~> 4.3'
 #
 gem 'cloudinary'
 
+gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
