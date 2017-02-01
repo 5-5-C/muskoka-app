@@ -1,3 +1,11 @@
+<% content_for :head do %>
+  <meta property="og:type"   content="sdff:post" />
+  <meta property="og:url"    content="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" />
+  <meta property="og:title"  content="This is <%= @user.entry.name %>'s Canada" />
+  <meta property="og:image"  content="<%= @user.entry.filter %>" />
+<% end %>
+
+
 <% if @user.entry %>
 <!-- if an entry exists -->
 
@@ -41,9 +49,8 @@
         <h1>Total Votes: <%= @user.entry.votes.count %></h1>
         <div class="row">
           <div class="col-md-4 sharing">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="facebook" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
+            <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="twitter" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
           </div>
           <div class="col-md-8"><h4>Share your entry and receive 10 extra votes!</h4></div>
         </div>
@@ -125,9 +132,8 @@
           <div class="vote-count">
             <h1>Total Votes: <%= @user.entry.votes.count %></h1>
             <div class="sharing">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="facebook" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
+              <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="twitter" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
               <h2>Share your entry and receive 10 extra votes!</h2>
             </div>
           </div>

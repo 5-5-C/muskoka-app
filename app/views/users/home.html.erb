@@ -117,7 +117,7 @@
         <% if admin.filter %>
 
         <style>
-          #admin<%= admin.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+          #admin<%= admin.id %> { background-image: url(<%= admin.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
         </style>
         <% else %>
         <style>
@@ -150,7 +150,7 @@
 
         <% if entry.filter_no_hashtag %>
         <style>
-          #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+          #image<%= entry.id %> { background-image: url(<%= entry.filter_no_hashtag %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
         </style>
         <% else %>
         <style>

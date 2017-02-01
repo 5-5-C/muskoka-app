@@ -39,9 +39,8 @@
               </div>
               <div class="hover-content-smaller">
                 <span class="hover-share">SHARE</span><br>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
+                <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="twitter" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
               </div>
           </div>
         <% end %>
