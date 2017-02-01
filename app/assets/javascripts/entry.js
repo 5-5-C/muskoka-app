@@ -45,7 +45,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
       var filterName = 'e_art:' + $(this).data("filter") + '/';
 
       // add the filter to the middle of it
-      var filtered = FIRST + "upload/w_300,g_south_west,x_20,y_20,l_MyCanada-01_copy_sc33qn/" + filterName + LAST
+      var filtered = FIRST + "upload/w_300,g_south_west,x_50,y_50,l_MyCanada-01_copy_sc33qn/" + filterName + LAST
 
       var filtered_no_hashtag = FIRST + "upload/" + filterName + LAST
 
