@@ -32,11 +32,13 @@ gem 'mini_magick', '~> 4.3'
 #
 gem 'cloudinary'
 
+
 gem 'shareable'
 
 gem "lazyload-rails"
 
 gem "figaro"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
