@@ -12,23 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, placeholder: "First Name" %>
-  </div> <br>
-
-  <div class="field">
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div> <br>
-
-  <div class="field">
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div><br>
-
-  <div class="field">
-    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
-  </div><br>
+    <%= f.text_field :email, placeholder: "Email", :class => "email" %>
+  </div>
 
   <div class="field t_c">
-    <h5>By clicking Submit you acknowledge you agree to our <a class="text-link" href="#">Terms & Conditions</a></h5>
+    <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="#">Terms & Conditions</a></h5>
     <%#= f.label :terms_of_service %>
     <%#= f.check_box :terms_of_service %>
   </div>

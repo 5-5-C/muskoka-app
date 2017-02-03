@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
+
+  before_filter :authorize, :only => [:show, :update, :destroy, :edit]
+
   def index
     @users = User.all
   end
 
   def home
     @user = User.new
+    @admin = Admin.all
     @entries = Entry.all
   end
 
@@ -41,10 +45,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
 
-    if @user.update_attributes(user_params)
-      redirect_to user_url(@user)
+    # TODO: clean this entire section up
+    @user = current_user
+    @entry = Entry.new(user_params["entry"])
+    @entry.user_id = current_user.id
+    if @user.update_attributes(only_user_params)
+      @entry.name = current_user.name
+      if @entry.save
+        redirect_to user_url(current_user)
+      end
     else
       render :edit
     end
@@ -59,6 +69,10 @@ class UsersController < ApplicationController
   private
 
   def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry: [:avatar, :title, :story])
+  end
+
+  def only_user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 

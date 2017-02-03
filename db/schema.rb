@@ -10,19 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112212614) do
+ActiveRecord::Schema.define(version: 20170130010940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "name"
+    t.text     "story"
+    t.string   "image"
+    t.string   "filter"
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "entries", force: :cascade do |t|
     t.string   "name"
     t.text     "story"
     t.integer  "user_id"
     t.string   "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "filter"
+    t.string   "title"
+    t.string   "filter_no_hashtag"
   end
 
   create_table "users", force: :cascade do |t|

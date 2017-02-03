@@ -11,13 +11,41 @@ $secondary1: #574942;
 $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
+$darkgrey: #2c2d2d;
+
+
+.homepadborder {
+	margin-top: 10vh;
+    background-color: rgba(0,0,0,0.7);
+    background-size: cover;
+    border: 10vh solid transparent;
+    border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
+}
+
+.herowhiteh1 {
+	color:#FFFFFF;
+	font-weight:900;
+}
+.herowhiteh2 {
+	color:#FFFFFF;
+	font-weight:900;
+	text-align:center;
+	margin-bottom:5vh;
+}
+.herowhiteh4 {
+	color:#FFFFFF;
+}
+
+.your-adventure-button-bottom {
+	margin-top: 40px;
+}
 
 .top-section {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407510/MainSection_Background_kiehbd.jpg");
-  height: 700px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: bottom;
 }
 
 #hero-button {
@@ -54,6 +82,7 @@ $secondary4: #e5e3e3;
 
 .hero-images {
   overflow: hidden;
+  margin-top:30vh;
 }
 
 .logo {
@@ -73,10 +102,9 @@ $secondary4: #e5e3e3;
 }
 
 .bracket-text {
-  position: absolute;
-  top: 15%;
-  left: 16%;
-  width: 55%;
+		background-size: cover;
+		border: 10vh solid transparent;
+		border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
   h1 {
     color: white;
     font-size: 4.5rem;
@@ -84,18 +112,71 @@ $secondary4: #e5e3e3;
     font-family: $font-regular;
     font-weight: 700;
     margin-bottom: 30px;
+    margin: 0;
   }
   h3 {
     color: white;
     font-family: $font-regular;
+		font-size: 2rem;
   }
 }
 
-.your-adventure {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
-  height: 600px;
-  background-size: cover;
+.your-adventure-button-top {
+	margin-bottom: 40px;
 }
+
+.your-adventure {
+	background-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.your-adventure:before {
+  background-color: rgba(0, 0, 0, 0.29);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.how-to-win {
+  background: #a9a9a9;;
+  color: #2c2d2d;
+  font-family: $font-regular;
+  .wrapper {
+    margin: 100px 0;
+  }
+  h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+  }
+  p {
+    font-size: 17px;
+  }
+  hr {
+    border-top: 2px solid rgba(238, 238, 238, 0.29);
+  }
+  // .prize {
+  //   color: $primary1;
+  // }
+}
+
+.polaroid-home {
+  max-width: 350px;
+  padding-bottom: 30px;
+}
+
+.entry-instructions {
+  color: white;
+  h1 {
+    margin-top: 0;
+  }
+}
+
 
 .enter-to-win {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
@@ -138,8 +219,7 @@ $secondary4: #e5e3e3;
 .signup-form {
   display: block;
   margin: auto;
-  width: 85%;
-  padding-bottom: 90px;
+  width: 100%;
 }
 
 .field input {
@@ -154,6 +234,11 @@ $secondary4: #e5e3e3;
   line-height: 1;
 }
 
+.instructions-small {
+  line-height: 1;
+  margin-top: 10px;
+}
+
 .actions {
   margin: auto;
   display: block;
@@ -161,7 +246,7 @@ $secondary4: #e5e3e3;
 
   input {
     border: 3px solid $secondary4;
-    background: #949494;
+    background: red;
     border-radius: 5px;
     color: $secondary4;
     padding: 6px 16px;
@@ -187,13 +272,15 @@ $secondary4: #e5e3e3;
 
 .board-text {
   position: absolute;
-  margin-top: 200px;
+  padding-top: 200px;
+  text-align: center;
   h1 {
     text-align: center;
     color: $primary2;
     font-family: $font-regular;
     font-weight: 700;
     font-size: 6rem;
+    margin-bottom: 30px;
   }
   h2 {
     text-align: center;
@@ -341,7 +428,6 @@ $secondary4: #e5e3e3;
 
 .more-posts {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
-  height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -350,8 +436,11 @@ $secondary4: #e5e3e3;
 
 
 .tourism-bottom {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
-  height: 500px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
+  height: 550px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
     h1 {
       margin-top: 0;
       padding: 80px 0 40px;
@@ -359,217 +448,152 @@ $secondary4: #e5e3e3;
       font-family: $font-regular;
       text-align: center;
       font-size: 4rem;
-      letter-spacing: 0.3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      // letter-spacing: 0.3rem;
     }
-    h4 {
+    h3 {
       color: $secondary4;
-      letter-spacing: 0.15rem;
+      // letter-spacing: 0.15rem;
       font-weight: 300;
     }
-    h3 {
-      color: $secondary4;
-      border: 2px solid $secondary4;
-      padding: 5px 10px;
+    .button-container {
       text-align: center;
-      letter-spacing: 0.2rem;
     }
 }
 
+.overlay {
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 100%;
+		text-align: center;
+}
 //media quieries for home page
-
-@media (max-width: 2000px) {
-  .green-board {
-    background-size: 60%;
-  }
-}
-
-@media (max-width: 1800px) {
-  .bracket-text {
-    width: 63%;
-  }
-}
-
-@media (max-width: 1600px) {
-  .green-board {
-    height: 500px;
-  }
-  .board-text {
-    margin-top: 150px;
-  }
-}
-
-@media (max-width: 1500px) {
-  .bracket-text {
-    width: 77%;
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .board-text {
-   h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 4rem;
-  }
- }
-}
-
 @media (max-width: 1200px) {
-  .board-text {
-    margin-top: 110px;
-  }
-  .green-board {
-    height: 400px;
-  }
-  .board-text h2 {
-    font-size: 3.5rem;
-  }
-  .bracket-text {
-    margin-left: 35px;
-  }
+	.tourism-bottom h1 {
+		padding-top: 42px;
+	}
 }
 
-@media (max-width: 1070px) {
-  .bracket-text {
-    width: 80%;
-    h1 {
-      margin-bottom: 0;
-    }
-    h3 {
-      margin-top:0;
-    }
-  }
-}
 
 @media (max-width: 990px) {
-  .board-text {
-    margin-top: 0px;
-    padding-top: 120px;
-  }
-  .green-board {
-    margin: 0;
-    background-size: 72%;
-  }
-  .bracket-text {
-    margin-left: 45px;
-  }
-  // .enter-now-container {
-  //   padding-left: 50px !important;
-  // }
+	.hero-images {
+		margin-top: 5vh;
+	}
+
+	.homepadborder {
+		border-width: 7vh;
+		margin-top: 4vh;
+	}
+
+	.board-text h2 {
+		font-size: 3rem;
+	}
+
+	.board-text h1 {
+		font-size: 4rem;
+	}
 }
 
-@media (max-width: 855px) {
-  .bracket-text {
-    width: 90%;
-  }
-  .brackets img {
-    width:150%;
-  }
-  .bracket-text h3 {
-    font-size: 2.6vw;
-  }
-  .bracket-text h1 {
-    font-size: 5vw;
-  }
-  .your-adventure {
-    height: 520px;
-  }
+@media (min-width: 761px) and (max-width: 990px) {
+	.vote-canada-button {
+		font-size: 1.6rem;
+	}
 }
 
-@media (max-width: 767px) {
-  .your-adventure {
-    height: 480px;
-  }
-  .bracket-text {
-    width: 80%;
-  }
-  .rules {
-    padding-top: 60px;
-    p {
-      font-size: 17px;
-    }
-  }
-  .enter-to-win .below {
-      font-size: 17px;
-  }
-  .green-board {
-    background-size: 85%;
-  }
-  #enter-now {
-    padding-top:50px;
-  }
-}
+@media (min-width: 600px) and (max-width: 760px) {
+	.vote-canada-button {
+		font-size: 1.2rem;
+	}
 
-@media (max-width: 660px) {
-  .top-section {
-    height: 560px;
-  }
-  .logo img {
-    top: 100px;
-  }
-  #hero-button {
-    margin-top: 440px;
-  }
-  .your-adventure {
-    height: 442px;
-  }
-  .brackets {
-    margin-top: 30px;
-  }
-  .green-board {
-    background-size: 100%;
-  }
+	.vote-canada-button-top {
+		font-size: 1.4rem;
+	}
+
+	.bracket-text {
+		border-width: 6vh;
+	}
 }
 
 @media (max-width: 600px) {
-  .your-adventure {
-    height: 410px;
-  }
-}
 
+	.green-board {
+		background-size: 100%;
+	}
 
-@media (max-width: 550px) {
-  .top-section {
-    height: 500px;
-  }
-  #hero-button {
-    margin-top: 375px;
-  }
-  .bracket-text h1 {
-    margin-top: 10px;
-  }
-  .bracket-text {
-    width: 92%;
-  }
-  .brackets {
-    margin-top:45px;
-  }
-  .board-text {
-    h2 {
-      font-size: 5.5vw;
-    }
-    h1 {
-      font-size: 7vw;
-    }
-  }
-  .enter-to-win h1 {
-    font-size: 8vw;
-  }
-}
+	.hero-images {
+		margin-top: 9vh;
+	}
 
-@media (max-width: 450px) {
-  .your-adventure {
-    height: 340px;
-  }
-  .green-board {
-    height: 300px;
-  }
-  .board-text {
-    padding-top: 100px;
-    h1 {
-      margin: 0;
-    }
-  }
+	.homepadborder {
+		border-width: 4vh;
+		margin-top: 1vh;
+	}
+
+	.herowhiteh1 {
+		font-size: 2rem;
+		margin-top: 0px;
+	}
+
+	.herowhiteh4 {
+		font-size: 1.4rem;
+	}
+
+	input.email {
+		height: 3rem;
+	}
+
+	.actions input {
+		font-size: 1.5rem;
+	}
+
+	.bracket-text {
+		border-width: 4vh;
+	}
+
+	.bracket-text h1 {
+		font-size: 2.2rem;
+	}
+
+	.bracket-text h3 {
+		font-size: 1.5rem;
+	}
+
+	.vote-canada-button-top {
+		font-size: 0.81rem;
+		padding: 5px 12px;
+	}
+
+	.tourism-bottom h1 {
+		font-size: 2.5rem;
+		padding-bottom: 0;
+	}
+
+	.tourism-bottom h3 {
+		font-size: 2rem;
+	}
+
+	.green-board {
+		background-image: none;
+	}
+
+	.board-text {
+		margin-top: 0;
+	}
+
+	.board-text h2 {
+		font-size: 5.5rem;
+	}
+
+	.vote-canada-button {
+		font-size: 0.92rem;
+		padding: 8px 12px;
+	}
+
+	.board-text {
+		padding-top: 100px;
+	}
+
+	.footer h4 {
+		font-size: 1.3rem;
+	}
 }

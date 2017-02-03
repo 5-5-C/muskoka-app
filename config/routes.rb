@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   get '/about' => 'users#about'
 
-  resources :users
+  resources :users, only: [:new, :create, :edit, :show, :destroy]
+
+  resources :admin, only: [:new, :create, :show]
+
+  patch '/update_user' => 'users#update', as: 'update_user'
 
   resources :entries do
     resources :votes, only: [:create, :destroy] do

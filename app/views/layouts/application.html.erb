@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MuskokaApp</title>
+    <title>Show Us Your Canada</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+    <!-- <link href="//db.onlinewebfonts.com/c/6257dc172f1ac66d3178e649706bac48?family=TrueNorthBlack" rel="stylesheet" type="text/css"/> -->
+
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+    <%= content_for?(:head) ? yield(:head) : '' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/9f06b3d066.js"></script>
+
   </head>
 
   <body>
@@ -27,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483642119/Explorers_Edge_shvnae.jpg") %></a>
+          <a class="navbar-brand" href="/"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485127243/Explorers-edge-canada150-logo-01_lgonfj.svg") %></a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar">
@@ -67,15 +72,56 @@
 
     <%= yield %>
 
+    <section id="footer" class="footer">
+            <div class="container">
+        		<center>
+        		<div class="container">
+        		    <div class="well-sm main-footer">
+        		        <div class="row">
+        		            <div class="col-md-12">
+        		                <div class="row footer-row">
+        		                    <div class="col-md-4 col-sm-4 col-xs-6 left-side">
+        		                        <h4 class="title-footer">
+        		                            Questions? Please contact us.</h4>
 
-    <div class="footer">
+                                        <h4>E: <a href="mailto:xxxxx@muskoka.com">xxxxxx@gmail.com</a></h4>
+                                        <h4>T: <a href="#">(416) 123-4567</a></h4>
+        		                    </div><!--end .col-md-4-->
+        		                    <div class="col-md-4 col-sm-4 col-xs-6 contact-email">
+
+        		                        <h4>
+        		                            © Copyright Show Us Your Canada 2017</h4>
+                                        <a href="http://instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+                                        <a href="http://facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+                                        <a href="http://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+        		                    </div><!--end .col-md-4 .contact-email-->
+        		                    <div class="col-md-4 col-sm-4 col-xs-12">
+        		                        <div class="row contact row-first">
+                                        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485149140/white_ee_atvb4d.png", class:"ee") %>
+                                        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485148734/ontario_white_on_black_uei7oe.png") %>
+        		                        </div><!--end .row .contact-->
+        		                    </div><!--end .col-md-6-->
+        		                </div><!--end .row-->
+        		            </div><!--end .col-md-12-->
+        		        </div><!--end .row-->
+        		    </div><!--end .well .well-sm .main-footer-->
+        		</div><!--end .container-->
+        		</center>
+        	</div><!--end .container-->
+        </section><!--end #footer-->
+
+    <!-- <div class="footer">
       <div class="container">
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-3 footer-content">
           <span class="explorer-bottom"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483642119/Explorers_Edge_shvnae.jpg") %></span>
           <span class="ontario-bottom"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483724870/ontario_white_on_black_oltpxc.png") %></span>
+          <p>Copyright 2017 Explorer's Edge</p>
+          <p>Questions? Please contact us.</p>
+          <p>T: (416) 123-4567</p>
+          <p>E: xxxxxx@gmail.com</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </body>
 </html>

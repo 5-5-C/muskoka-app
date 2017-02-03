@@ -7,28 +7,120 @@ $secondary1: #574942;
 $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
+$darkgrey: #2c2d2d;
 
+
+.entry-top {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.entry-row {
+  padding-top: 75px;
+}
+
+.photo-column {
+  text-align: center;
+}
+
+.field {
+  text-align: center;
+}
+
+.name-field {
+  width: 400px !important;
+  text-align: center;
+}
 
 .entry-instructions {
-  padding-top: 100px;
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483465726/pwtdhl4jqxknukedahee.png");
-  background-size: cover;
-  h3 {
-    color: $primary1;
-    font-family: $font-regular;
-    font-weight: 300;
-    text-align: center;
-  }
+
   h2 {
-    color: $primary1;
+    color: white;
+    font-family: $font-regular;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-family: $font-regular;
+  }
+  // h2 {
+  //   color: white;
+  //   font-family: $font-regular;
+  //   font-weight: 300;
+  //   text-align: right;
+  // }
+}
+
+#suyc-entry {
+  max-width: 400px;
+}
+
+#title_text {
+  border-radius: 5px;
+  border: 5px solid rgba(210, 69, 69, 0.13);
+}
+
+#new_entry {
+  color: $darkgrey;
+}
+
+.counter {
+  margin: 10px 0 20px;
+  color: white;
+}
+
+.step {
+  text-align: center;
+  h3 {
     font-family: $font-regular;
     font-weight: 300;
-    text-align: right;
   }
+}
+
+.step-row {
+  margin-top: 50px;
+}
+
+.upload-label {
+  width: 400px;
+  height: 60px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.7rem 1.25rem;
+  color: #f1e5e6;
+  background-color: #d3394c;
+  margin-top: 80px;
 }
 
 .entry-top {
   padding-bottom: 80px;
+  padding-top: 40px;
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+
+  &:before {
+    background-color: rgba(0, 0, 0, 0.29);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.entry-photo-step {
+  background: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  padding: 40px;
 }
 
 .fa-camera-retro, .fa-upload, .fa-pencil-square-o, .fa-clone, .fa-paperclip, .fa-smile-o {
@@ -51,10 +143,15 @@ $secondary4: #e5e3e3;
   margin-bottom: 20px;
 }
 
+.carrierwave-wave-field input {
+  font-size: 2.6rem !important;
+}
+
 #story-box {
   border-radius: 5px;
   border: 5px solid rgba(210, 69, 69, 0.13);
   width: 100%;
+  height: 20vh;
 }
 
 textarea {
@@ -74,10 +171,13 @@ textarea {
   margin-top: 20px !important;
 }
 
+.carrierwave-wave-field {
+  margin-top: 5vh;
+}
+
 .carrierwave-wave-field input {
-  opacity: 0;
   position: relative;
-  top: -60px;
+  opacity: 0;
 
   &:hover {
     cursor: pointer;
@@ -105,8 +205,11 @@ textarea {
 }
 
 #avatar-upload {
-  height: 400px;
+  height: 61px;
+  width: 100%;
+  padding-left: 0px;
   position: absolute;
+  bottom: 10px;
 }
 
 .fake-button {
@@ -142,12 +245,76 @@ textarea {
   text-align: center;
 }
 
+.step-header {
+  font-weight: bold;
+}
+
+.step-3 {
+  margin-top: 50px;
+}
+
 .edit-button {
   padding: 2px 6px 3px;
 }
 
+
+@media (max-width: 1200px) {
+  .vertical-text {
+    font-size: 4rem;
+  }
+
+  .entry-row {
+    padding-top: 50px;
+  }
+
+  .upload-label {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+// @media (max-width: 1200px) and (min-width: 991px) {
+//   #avatar-upload {
+//     top: 48px;
+//   }
+// }
+
+// @media (max-width: 990px) {
+//   #avatar-upload {
+//     bottom: 9px;
+//     left: 270px;
+//   }
+// }
+
 @media (max-width: 767px) {
   .edit-photo {
     padding-top:50px;
+  }
+  .entry-row {
+    padding-top: 50px;
+  }
+  .entry-top {
+    height: 810px;
+    h2 {
+    color: white;
+    }
+  }
+  .vertical-text {
+    margin-top: 30px !important;
+  }
+
+  h1.vertical-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .name-field {
+    width: 270px !important;
+  }
+
+  img.polaroid-home {
+    max-width: 100%;
   }
 }
