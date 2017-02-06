@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130010940) do
+ActiveRecord::Schema.define(version: 20170206143350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,16 +25,26 @@ ActiveRecord::Schema.define(version: 20170130010940) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dummy_emails", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "entries", force: :cascade do |t|
     t.string   "name"
     t.text     "story"
     t.integer  "user_id"
     t.string   "avatar"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "filter"
-    t.string   "title"
-    t.string   "filter_no_hashtag"
   end
 
   create_table "users", force: :cascade do |t|

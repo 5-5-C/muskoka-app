@@ -1,6 +1,6 @@
-<%= form_for(@user) do |f| %>
+<%= form_for(@email, url: email_index_path) do |f| %>
 
-  <% if @user.errors.any? %>
+  <% if @email.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
@@ -19,7 +19,6 @@
     <div class="main-page">
       <%= f.submit 'Submit' %>
       <% end %>
-
     </div>
   </div>
   <div class="field t_c">

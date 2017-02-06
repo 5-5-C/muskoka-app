@@ -18,8 +18,11 @@ $darkgrey: #2c2d2d;
 	margin-top: 10vh;
     background-color: rgba(0,0,0,0.7);
     background-size: cover;
-    border: 10vh solid transparent;
-    border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
+    border: 5vh solid transparent;
+}
+
+div.email-form {
+	padding-left: 0px;
 }
 
 .herowhiteh1 {
@@ -41,11 +44,15 @@ $darkgrey: #2c2d2d;
 }
 
 .top-section {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1486157412/MainSection_Background_Updated_eplmya.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center center;
+}
+
+.top-container {
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
 #hero-button {
@@ -82,7 +89,7 @@ $darkgrey: #2c2d2d;
 
 .hero-images {
   overflow: hidden;
-  margin-top:30vh;
+  margin-top:13vh;
 }
 
 .logo {
@@ -185,17 +192,32 @@ $darkgrey: #2c2d2d;
     font-weight: 700;
     font-size: 5rem;
     margin-top: 0;
-    padding: 90px 0px 0px;
-    text-align: center;
-    color: white;
+    padding: 90px 0px 0px;    color: white;
     letter-spacing: 0.3rem;
   }
+	h3 {
+		font-family: $font-regular;
+		margin-top: 0;
+		color: white;
+		padding-bottom: 50px;
+		padding-top: 20px;
+		}
   .below {
     text-align: center;
     font-size: 2rem;
     padding-bottom: 10px;
     color: $secondary4;
   }
+}
+
+.enter-to-win-button {
+	margin-bottom: 6vh;
+}
+
+.bottom-hero-images {
+	max-width: 40%;
+	margin: auto;
+	margin-top: 4vh;
 }
 
 .rules {
@@ -239,10 +261,9 @@ $darkgrey: #2c2d2d;
   margin-top: 10px;
 }
 
-.actions {
+.actions, .main-page {
   margin: auto;
   display: block;
-  text-align: center;
 
   input {
     border: 3px solid $secondary4;
@@ -262,6 +283,9 @@ $darkgrey: #2c2d2d;
   }
 }
 
+.actions {
+	text-align: center;
+}
 
 .choose-canada {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
@@ -436,8 +460,8 @@ $darkgrey: #2c2d2d;
 
 
 .tourism-bottom {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
-  height: 550px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
+  height: 590px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -452,7 +476,7 @@ $darkgrey: #2c2d2d;
       text-transform: uppercase;
       // letter-spacing: 0.3rem;
     }
-    h3 {
+    h4, h3 {
       color: $secondary4;
       // letter-spacing: 0.15rem;
       font-weight: 300;
@@ -481,8 +505,8 @@ $darkgrey: #2c2d2d;
 	}
 
 	.homepadborder {
-		border-width: 7vh;
-		margin-top: 4vh;
+		border-width: 5vh;
+		margin-top: 0;
 	}
 
 	.board-text h2 {
@@ -491,6 +515,11 @@ $darkgrey: #2c2d2d;
 
 	.board-text h1 {
 		font-size: 4rem;
+	}
+
+	div.email-form {
+		padding-left: 15px;
+		padding-bottom: 15px;
 	}
 }
 

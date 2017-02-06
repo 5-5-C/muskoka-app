@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   patch '/update_user' => 'users#update', as: 'update_user'
 
+  resources :email, only: [:create]
+
   resources :entries do
     resources :votes, only: [:create, :destroy] do
       member do
