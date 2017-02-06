@@ -38,6 +38,8 @@ gem "lazyload-rails"
 
 gem "figaro"
 
+# Use for easy email sending
+gem 'sendgrid-ruby'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
