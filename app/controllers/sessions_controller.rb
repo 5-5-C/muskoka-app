@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
       if current_user.entry == nil
         redirect_to new_entry_url, notice: "Logged in"
       else
-        redirect_to entry_url(current_user.entry.id)
-        redirect_to new_entry_url, notice: "Logged in"
+        redirect_to entry_url(current_user.entry.id), notice: "Logged in"
       end
     # If the user exists AND the password entered is correct.
     elsif  user && user.authenticate(params[:password])
