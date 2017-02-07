@@ -40,6 +40,9 @@ gem "figaro"
 
 # Use for easy email sending
 gem 'sendgrid-ruby'
+
+# Use for facebook login feature
+gem 'omniauth-facebook'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
