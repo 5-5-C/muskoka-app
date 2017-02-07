@@ -25,12 +25,6 @@ ActiveRecord::Schema.define(version: 20170206143350) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dummy_emails", force: :cascade do |t|
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "emails", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at", null: false
@@ -42,9 +36,11 @@ ActiveRecord::Schema.define(version: 20170206143350) do
     t.text     "story"
     t.integer  "user_id"
     t.string   "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "filter"
+    t.string   "title"
+    t.string   "filter_no_hashtag"
   end
 
   create_table "users", force: :cascade do |t|

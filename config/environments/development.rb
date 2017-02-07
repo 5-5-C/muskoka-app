@@ -35,7 +35,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :user_name => ENV["send_gird_user"],
     :password => ENV["send_gird_pass"],
-    :domain => 'pierresiccoweb.com',
+    :domain => 'showusyourcanada.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,

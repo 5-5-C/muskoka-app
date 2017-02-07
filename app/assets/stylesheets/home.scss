@@ -13,6 +13,11 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 $darkgrey: #2c2d2d;
 
+html, body {
+	max-width: 100%;
+overflow-x: hidden;
+}
+
 
 .homepadborder {
 	margin-top: 10vh;
@@ -35,8 +40,18 @@ div.email-form {
 	text-align:center;
 	margin-bottom:5vh;
 }
-.herowhiteh4 {
+.herowhiteh4, .herowhiteh4-last {
 	color:#FFFFFF;
+	margin-top: 18px;
+}
+
+.submit-form {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.herowhiteh4-last {
+	margin-bottom: 18px;
 }
 
 .your-adventure-button-bottom {
@@ -252,6 +267,15 @@ div.email-form {
   font-size: 2rem;
 }
 
+.field input.email {
+	margin-top: 3px;
+}
+
+input.email-only {
+	margin-left: 22px;
+	margin-top: 3px;
+}
+
 .instructions {
   line-height: 1;
 }
@@ -292,6 +316,11 @@ div.email-form {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+.img-biker {
+	position: absolute;
+	right: -130px;
 }
 
 .board-text {
@@ -480,6 +509,7 @@ div.email-form {
       color: $secondary4;
       // letter-spacing: 0.15rem;
       font-weight: 300;
+			margin-bottom: 30px;
     }
     .button-container {
       text-align: center;
@@ -520,6 +550,14 @@ div.email-form {
 	div.email-form {
 		padding-left: 15px;
 		padding-bottom: 15px;
+	}
+
+	img.img-biker {
+		display: none;
+	}
+
+	div.main-page {
+		text-align: center;
 	}
 }
 
@@ -563,7 +601,7 @@ div.email-form {
 		margin-top: 0px;
 	}
 
-	.herowhiteh4 {
+	.herowhiteh4, .herowhiteh4-last {
 		font-size: 1.4rem;
 	}
 
