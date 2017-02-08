@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def home
     @user = User.new
+    @email = Email.new
     @admin = Admin.all
     @entries = Entry.all
   end

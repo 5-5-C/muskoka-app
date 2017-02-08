@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # routes for omni path/facebook integratin
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
 
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -11,6 +16,8 @@ Rails.application.routes.draw do
   resources :admin, only: [:new, :create, :show]
 
   patch '/update_user' => 'users#update', as: 'update_user'
+
+  resources :email, only: [:create]
 
   resources :entries do
     resources :votes, only: [:create, :destroy] do

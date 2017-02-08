@@ -13,13 +13,26 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 $darkgrey: #2c2d2d;
 
+html, body {
+	max-width: 100%;
+overflow-x: hidden;
+}
+
 
 .homepadborder {
-	margin-top: 10vh;
+	margin-top: 8vh;
     background-color: rgba(0,0,0,0.7);
     background-size: cover;
-    border: 10vh solid transparent;
-    border-image: url(http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png) 20% repeat;
+    border: 5vh solid transparent;
+}
+
+div.email-form {
+	padding-bottom: 15px;
+}
+
+div.email-capture-box {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .herowhiteh1 {
@@ -32,8 +45,13 @@ $darkgrey: #2c2d2d;
 	text-align:center;
 	margin-bottom:5vh;
 }
-.herowhiteh4 {
+.herowhiteh4, .herowhiteh4-last {
 	color:#FFFFFF;
+	margin-top: 18px;
+}
+
+.herowhiteh4-last {
+	margin-bottom: 18px;
 }
 
 .your-adventure-button-bottom {
@@ -41,11 +59,16 @@ $darkgrey: #2c2d2d;
 }
 
 .top-section {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485727651/hero_q5mkrx.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1486157412/MainSection_Background_Updated_eplmya.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center center;
+}
+
+.top-container {
+	background-color: rgba(0, 0, 0, 0.15);
+	height: 100%;
 }
 
 #hero-button {
@@ -82,7 +105,7 @@ $darkgrey: #2c2d2d;
 
 .hero-images {
   overflow: hidden;
-  margin-top:30vh;
+  margin-top:13vh;
 }
 
 .logo {
@@ -185,11 +208,16 @@ $darkgrey: #2c2d2d;
     font-weight: 700;
     font-size: 5rem;
     margin-top: 0;
-    padding: 90px 0px 0px;
-    text-align: center;
-    color: white;
+    padding: 90px 0px 0px;    color: white;
     letter-spacing: 0.3rem;
   }
+	h3 {
+		font-family: $font-regular;
+		margin-top: 0;
+		color: white;
+		padding-bottom: 50px;
+		padding-top: 20px;
+		}
   .below {
     text-align: center;
     font-size: 2rem;
@@ -198,12 +226,26 @@ $darkgrey: #2c2d2d;
   }
 }
 
+.enter-to-win-button {
+	margin-bottom: 6vh;
+}
+
+.bottom-hero-images {
+	max-width: 40%;
+	margin: auto;
+	margin-top: 4vh;
+}
+
 .rules {
   list-style-type: none;
   padding-top: 150px;
   font-size: 2rem;
   font-family: $font-regular;
   color: $secondary4;
+}
+
+#enter-now {
+	cursor: pointer;
 }
 
 .fa-check-square {
@@ -230,6 +272,14 @@ $darkgrey: #2c2d2d;
   font-size: 2rem;
 }
 
+.field input.email {
+	margin-top: 3px;
+}
+
+input.email-only {
+	margin-top: 3px;
+}
+
 .instructions {
   line-height: 1;
 }
@@ -239,10 +289,9 @@ $darkgrey: #2c2d2d;
   margin-top: 10px;
 }
 
-.actions {
+.actions, .main-page {
   margin: auto;
   display: block;
-  text-align: center;
 
   input {
     border: 3px solid $secondary4;
@@ -262,12 +311,20 @@ $darkgrey: #2c2d2d;
   }
 }
 
+.actions {
+	text-align: center;
+}
 
 .choose-canada {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+.img-biker {
+	position: absolute;
+	right: -130px;
 }
 
 .board-text {
@@ -436,8 +493,8 @@ $darkgrey: #2c2d2d;
 
 
 .tourism-bottom {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485722649/19560925711_ff5979b97c_o_f6hvcn.jpg");
-  height: 550px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
+  height: 590px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -452,14 +509,27 @@ $darkgrey: #2c2d2d;
       text-transform: uppercase;
       // letter-spacing: 0.3rem;
     }
-    h3 {
+    h4, h3 {
       color: $secondary4;
       // letter-spacing: 0.15rem;
       font-weight: 300;
+			margin-bottom: 30px;
     }
     .button-container {
       text-align: center;
     }
+}
+
+span.fa {
+	margin: 0px;
+	margin-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+}
+
+a.btn.btn-block.btn-social.btn-facebook {
+	padding-top: 12px;
+	padding-bottom: 12px;
 }
 
 .overlay {
@@ -467,11 +537,30 @@ $darkgrey: #2c2d2d;
 		height: 100%;
 		text-align: center;
 }
+
 //media quieries for home page
+
+@media (min-width: 1200px) {
+
+	.facebook-login {
+		padding-left: 30px;
+		padding-right: 0px;
+	}
+
+	div.email-form {
+		padding-right: 0px;
+	}
+
+	div.submit-form {
+		padding-left: 8px;
+	}
+
+}
 @media (max-width: 1200px) {
 	.tourism-bottom h1 {
 		padding-top: 42px;
 	}
+
 }
 
 
@@ -481,8 +570,8 @@ $darkgrey: #2c2d2d;
 	}
 
 	.homepadborder {
-		border-width: 7vh;
-		margin-top: 4vh;
+		border-width: 5vh;
+		margin-top: 0;
 	}
 
 	.board-text h2 {
@@ -491,6 +580,19 @@ $darkgrey: #2c2d2d;
 
 	.board-text h1 {
 		font-size: 4rem;
+	}
+
+	img.img-biker {
+		display: none;
+	}
+
+	div.main-page {
+		text-align: center;
+	}
+
+	div.submit-form {
+		text-align: center;
+		padding-bottom: 15px;
 	}
 }
 
@@ -512,12 +614,30 @@ $darkgrey: #2c2d2d;
 	.bracket-text {
 		border-width: 6vh;
 	}
+
+	div.facebook-login {
+		text-align: center;
+	}
+
 }
 
 @media (max-width: 600px) {
 
+	div.facebook-login {
+		text-align: center;
+	}
+
 	.green-board {
 		background-size: 100%;
+	}
+
+	input.email-only {
+		margin-left: 0;
+	}
+
+	.bottom-hero-images {
+		max-width: 60%;
+		margin-top: 3vh;
 	}
 
 	.hero-images {
@@ -534,7 +654,7 @@ $darkgrey: #2c2d2d;
 		margin-top: 0px;
 	}
 
-	.herowhiteh4 {
+	.herowhiteh4, .herowhiteh4-last {
 		font-size: 1.4rem;
 	}
 
@@ -595,5 +715,9 @@ $darkgrey: #2c2d2d;
 
 	.footer h4 {
 		font-size: 1.3rem;
+	}
+
+	.top-section {
+		height: 120vh;
 	}
 }
