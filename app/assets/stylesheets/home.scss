@@ -244,6 +244,10 @@ div.email-capture-box {
   color: $secondary4;
 }
 
+#enter-now {
+	cursor: pointer;
+}
+
 .fa-check-square {
   color: $secondary4;
   margin: 0;
@@ -273,7 +277,6 @@ div.email-capture-box {
 }
 
 input.email-only {
-	margin-left: 22px;
 	margin-top: 3px;
 }
 
@@ -536,10 +539,28 @@ a.btn.btn-block.btn-social.btn-facebook {
 }
 
 //media quieries for home page
+
+@media (min-width: 1200px) {
+
+	.facebook-login {
+		padding-left: 30px;
+		padding-right: 0px;
+	}
+
+	div.email-form {
+		padding-right: 0px;
+	}
+
+	div.submit-form {
+		padding-left: 8px;
+	}
+
+}
 @media (max-width: 1200px) {
 	.tourism-bottom h1 {
 		padding-top: 42px;
 	}
+
 }
 
 
@@ -697,6 +718,6 @@ a.btn.btn-block.btn-social.btn-facebook {
 	}
 
 	.top-section {
-		height: 115vh;
+		height: 120vh;
 	}
 }
