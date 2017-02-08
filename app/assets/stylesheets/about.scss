@@ -20,24 +20,25 @@ $secondary4: #e5e3e3;
     border-image: url('http://res.cloudinary.com/dx3z90dgl/image/upload/v1485724817/brackets_r2tay1.png') 20% repeat;
 }
 
-.intro-text-wrapper {
-  padding: 15vh;
+div.intro-text-wrapper {
+  padding: 7vh 7vh;
+	background-color: rgba(0,0,0,.70);
 }
 
 .intro-container {
   // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 67vh;
   background-position: center;
-  text-align: center;
+	margin-top: 20vh;
 }
 
 
 // PANEL ONE - EXPLORE MORE
 
 .exploremore {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -132,10 +133,15 @@ $secondary4: #e5e3e3;
   margin: 30px 0;
 }
 
+.about-top-button.small {
+	display: none;
+}
+
 .about-intro {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485726877/cliffjump_gomqsq.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+	background-position: center center;
   padding: 50px 0;
   background-attachment: fixed;
 	height: 100vh;
@@ -145,7 +151,6 @@ $secondary4: #e5e3e3;
     color: white;
   }
   &:before {
-    background-color: rgba(35, 35, 39, 0.5);
     content: "";
     position: absolute;
     left: 0;
@@ -203,6 +208,15 @@ h1.explore-heading {
 	.intro-text-wrapper {
 		padding: 6.4vh;
 	}
+
+	a.about-top-button {
+		font-size: 1.7rem;
+	}
+
+	div.intro-container {
+		margin-top: 10vh;
+	}
+
 }
 
 @media (max-width: 770px) {
@@ -210,11 +224,13 @@ h1.explore-heading {
 	.textpadbackground {
 		border-width: 6vh;
 	}
+
 }
 
 
 @media (max-width: 600px) {
-	.about-intro {
+	section.about-intro {
+		height: 115vh;
 		h1 {
 			font-size: 2rem;
 		}
@@ -230,8 +246,13 @@ h1.explore-heading {
 	}
 
 	a.about-top-button {
-		font-size: 0.78rem;
-		padding: 5px 10px;
+		display: none;
+	}
+
+	a.about-top-button.small {
+		display: block;
+		color: white;
+		font-size: 1.17rem;
 	}
 
 	.explore-heading {
