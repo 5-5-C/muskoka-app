@@ -18,9 +18,13 @@ html, body {
 overflow-x: hidden;
 }
 
+.home-page-agreement {
+	margin-top: 20px;
+	margin-bottom: 0px !important;
+}
 
 .homepadborder {
-	margin-top: 8vh;
+	margin-top: 4vh;
     background-color: rgba(0,0,0,0.7);
     background-size: cover;
     border: 5vh solid transparent;
@@ -520,6 +524,10 @@ input.email-only {
     }
 }
 
+.homepage-bottom-terms {
+	margin-top: 20px;
+}
+
 span.fa {
 	margin: 0px;
 	margin-left: 10px;
@@ -668,14 +676,9 @@ a.btn.btn-block.btn-social.btn-facebook {
 
 	.bracket-text {
 		border-width: 4vh;
-	}
-
-	.bracket-text h1 {
-		font-size: 2.2rem;
-	}
-
-	.bracket-text h3 {
-		font-size: 1.5rem;
+		h3 {
+			font-size: 2.5rem;
+		}
 	}
 
 	.vote-canada-button-top {
