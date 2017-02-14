@@ -57,7 +57,7 @@ class UsersController < ApplicationController
         redirect_to user_url(current_user)
       end
     else
-      render :edit
+      redirect_to new_entry_url
     end
   end
 
@@ -70,11 +70,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry: [:avatar, :title, :story])
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry: [:avatar, :title, :story, :location])
   end
 
   def only_user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :postal_code)
   end
 
 end

@@ -1,24 +1,37 @@
 <%= form_for(@user, url: update_user_url) do |t| %>
 <div class="entry-instructions">
   <div class="container-fluid entry-top">
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @entry.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="row entry-row">
       <div class="col-lg-3 col-lg-offset-1 photo-column">
         <img id="suyc-entry" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
       </div>
       <div class="col-lg-6">
         <h1 class="vertical-text">ENTER TO WIN A 1 WEEK VACATION FOR 4 FRIENDS TO THE GREAT CANADIAN WILDERNESS NORTH OF TORONTO!</h1>
-        <h2 class="center-text">Step 1: Tell us your name and select a password:</h2>
+        <h2 class="center-text">Step 1: Tell us your name, postal code, and select a password:</h2>
         <div class="user-form">
           <div class="field">
-            <%= t.text_field :name, placeholder: "First Name", :class => "black-text name-field" %>
+            <%= t.text_field :name, required: true, placeholder: "First Name", :class => "black-text name-field" %>
+          </div><br>
+          <div class="field">
+            <%= t.text_field :postal_code, required: true, placeholder: "Postal Code", :class => "black-text name-field" %>
           </div><br>
           <% if current_user.provider == nil %>
             <div class="field">
-              <%= t.password_field :password, placeholder: "Password", :class => "black-text name-field" %>
+              <%= t.password_field :password, required: true, placeholder: "Password", :class => "black-text name-field" %>
             </div><br>
 
             <div class="field">
-              <%= t.password_field :password_confirmation, placeholder: "Confirm Password", :class => "black-text name-field" %>
+              <%= t.password_field :password_confirmation, required: true, placeholder: "Confirm Password", :class => "black-text name-field" %>
             </div><br>
           <% end %>
           <div class="field t_c">
@@ -108,6 +121,18 @@
                 <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
                   <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
                 </div> -->
+                <%= entry_form.label :location, "Algonquin Park" %>
+                <%= entry_form.radio_button :location, checked_value = "Algonquin Park" %>
+                <%= entry_form.label :location, "Almaguin Highlands" %>
+                <%= entry_form.radio_button :location, checked_value = "Almaguin Highlands" %>
+                <%= entry_form.label :location, "Loring-Restoule" %>
+                <%= entry_form.radio_button :location, checked_value = "Loring-Restoule" %>
+                <%= entry_form.label :location, "Muskoka" %>
+                <%= entry_form.radio_button :location, checked_value = "Muskoka" %>
+                <%= entry_form.label :location, "Parry Sound" %>
+                <%= entry_form.radio_button :location, checked_value = "Parry Sound" %>
+                <%= entry_form.label :location, "None" %>
+                <%= entry_form.radio_button :location, checked_value = nil %>
                 <div class="actions">
                   <%= t.submit 'Submit', :id => "update-user-submit" %>
                 </div>
