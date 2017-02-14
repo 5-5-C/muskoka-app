@@ -10,27 +10,20 @@
       <div class="submit-button">
         <%= link_to "SUBMIT YOUR ENTRY", new_entry_path, class:"button-main" %>
       </div>
-      <%= form_tag(entries_path, :method => "get", id: "search-form") do %>
-      <div class="checl-field">
-        <%= label_tag "Filter by authentic Canadian experiences?", nil, class: "search-label" %>
-        <%= check_box_tag 'search', params[:search], true, id: "search-checkbox" %>
-      </div>
-      <%= submit_tag "Search", id: "search-button", class: "button-main" %>
-      <% end %>
     </div>
     <div class="col-md-3 col-sm-3">
       <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg">
     </div>
   </div>
-  <div class="row">
+  <div class="row sort-row">
     <div class="col-xs-12 sort-by">
       <div class="sort-text">
         <h3>Sort Memories by: </h3>
-        <h3><a href="#">AUTHENTIC REGIONAL EXPERIENCES</a></h3>
+        <h3><a href="/entries?utf8=✓&search=on&commit=Search">AUTHENTIC REGIONAL EXPERIENCES</a></h3>
         <h3>
           |
         </h3>
-        <h3><a href="#">SHOW ALL MEMORIES</a></h3>
+        <h3><a href="/entries">SHOW ALL MEMORIES</a></h3>
       </div>
     </div>
   </div>

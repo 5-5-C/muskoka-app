@@ -420,8 +420,8 @@ input.email-only {
 
 .hover-content-bottom-right {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: -16px;
+  right: 33px;
   display: none;
   color: white;
   font-family: $font-regular;
@@ -552,9 +552,9 @@ a.btn.btn-block.btn-social.btn-facebook {
 }
 
 img.authentic-image-home {
-	max-width: 395px;
+	max-width: 325px;
 	right: 0;
-	top: 60px;
+	bottom: 0;
 	z-index: 100;
 	position: absolute;
 	display: none;
