@@ -86,7 +86,7 @@ $darkgrey: #2c2d2d;
   position: relative;
   padding: 0 !important;
   &:hover {
-    .hover-content-smaller, .hover-content-smaller-top {
+    .hover-content-smaller, .hover-content-smaller-top, #authentic-image {
       display: block;
     }
     cursor:pointer;
@@ -281,6 +281,13 @@ $darkgrey: #2c2d2d;
   color: black;
 }
 
+#authentic-image {
+  max-width: 200px;
+  right: 0;
+  top: 100px;
+  display: none;
+  z-index: 100;
+}
 
 
 @media (min-width:1800px) {
