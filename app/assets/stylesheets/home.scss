@@ -110,6 +110,9 @@ div.email-capture-box {
 .hero-images {
   overflow: hidden;
   margin-top:13vh;
+	img {
+		max-width: 100%;
+	}
 }
 
 .logo {

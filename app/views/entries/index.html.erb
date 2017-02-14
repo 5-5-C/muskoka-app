@@ -11,7 +11,7 @@
         <%= link_to "SUBMIT YOUR ENTRY", new_entry_path, class:"button-main" %>
       </div>
       <%= form_tag(entries_path, :method => "get", id: "search-form") do %>
-      <%= label_tag "Filter by authentic Candian experiences?" %>
+      <%= label_tag "Filter by authentic Canadian experiences?" %>
       <%= check_box_tag 'search', params[:search], true, id: "search-checkbox" %>
       <%= submit_tag "Search", id: "search-button", class: "button-main" %>
       <% end %>
