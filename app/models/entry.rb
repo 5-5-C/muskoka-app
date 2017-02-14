@@ -23,7 +23,9 @@ class Entry < ApplicationRecord
   end
 
   def self.search(search)
-   where("location LIKE ?", "%#{search}%")
+    search.each do |search|
+      return where("location LIKE ?", "%#{search}%")
+    end
   end
 
 
