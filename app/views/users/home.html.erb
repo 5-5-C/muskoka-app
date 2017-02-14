@@ -19,7 +19,7 @@
 							<%= render 'form' %>
 						</div>
             <div class="t_c home-page-agreement">
-              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="#">Terms & Conditions</a></h5>
+              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="/rules">Terms & Conditions</a></h5>
               <%#= f.label :terms_of_service %>
               <%#= f.check_box :terms_of_service %>
             </div>
@@ -102,7 +102,7 @@
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
         </div>
         <% if entry.location != nil %>
-          <img id="authentic-image" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
+          <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
         <% end %>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
@@ -138,6 +138,7 @@
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i></h3></span><br>
         </div>
+        <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
           <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= admin.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= admin_path(admin) %>" data-type="facebook" data-description="This is <%= admin.name %>'s Canada" data-media="<%= admin.image %>"></a>

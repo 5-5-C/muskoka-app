@@ -281,6 +281,11 @@ $darkgrey: #2c2d2d;
   color: black;
 }
 
+#search-checkbox {
+  height: 30px;
+  width: 30px;
+}
+
 #authentic-image {
   max-width: 200px;
   right: 0;
@@ -290,6 +295,9 @@ $darkgrey: #2c2d2d;
   position: absolute;
 }
 
+.search-label {
+  font-size: 2rem;
+}
 
 @media (min-width:1800px) {
   .right-bracket {

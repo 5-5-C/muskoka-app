@@ -24,7 +24,6 @@ overflow-x: hidden;
 }
 
 .homepadborder {
-	margin-top: 4vh;
     background-color: rgba(0,0,0,0.7);
     background-size: cover;
     border: 5vh solid transparent;
@@ -385,7 +384,7 @@ input.email-only {
     .hover-content-bottom-right {
       display: block;
     }
-		#authentic-image {
+		.authentic-image-home {
 			display: block;
 		}
   }
@@ -552,6 +551,15 @@ a.btn.btn-block.btn-social.btn-facebook {
 		text-align: center;
 }
 
+img.authentic-image-home {
+	max-width: 395px;
+	right: 0;
+	top: 60px;
+	z-index: 100;
+	position: absolute;
+	display: none;
+}
+
 //media quieries for home page
 
 @media (min-width: 1200px) {
@@ -616,6 +624,16 @@ a.btn.btn-block.btn-social.btn-facebook {
 	}
 }
 
+@media (max-width: 790px) {
+	a.navbar-brand {
+		img {
+			width: 180px;
+		}
+	}
+}
+
+
+
 @media (min-width: 600px) and (max-width: 760px) {
 	.vote-canada-button {
 		font-size: 1.2rem;
@@ -636,6 +654,11 @@ a.btn.btn-block.btn-social.btn-facebook {
 }
 
 @media (max-width: 600px) {
+
+	img.authentic-image-home {
+		max-width: 200px;
+		top: 100px;
+	}
 
 	div.facebook-login {
 		text-align: center;

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/about' => 'users#about'
 
+  get '/rules' => 'rules#index'
+
   resources :users, only: [:new, :create, :edit, :show, :destroy]
 
   resources :admin, only: [:new, :create, :show]
