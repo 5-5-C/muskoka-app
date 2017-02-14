@@ -226,7 +226,7 @@ $darkgrey: #2c2d2d;
 }
 
 .entry-show-main-bottom {
-  background-color: $secondary4;
+  background-color: white;
   background-size: cover;
   background-repeat: none;
   padding-bottom:50px;
@@ -260,7 +260,7 @@ $darkgrey: #2c2d2d;
 }
 
 .entry-story {
-  background-color: $secondary4;
+  background-color: white;
   padding: 20px;
   margin-left: 2% !important;
   font-family: $font-regular;
@@ -293,6 +293,10 @@ $darkgrey: #2c2d2d;
   display: none;
   z-index: 100;
   position: absolute;
+}
+
+#user_entry_location {
+  color: black;
 }
 
 .search-label {
