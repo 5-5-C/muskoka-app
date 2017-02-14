@@ -4,6 +4,11 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all
+    if params[:search]
+      @entries = Entry.search(params[:search]).order("created_at DESC")
+    else
+      @entries = Entry.all.order('created_at DESC')
+    end
 
     respond_to do |format|
       format.html

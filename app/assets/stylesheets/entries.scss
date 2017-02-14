@@ -273,6 +273,15 @@ $darkgrey: #2c2d2d;
   text-align: left !important;
 }
 
+#search-form {
+  margin-top: 3vh;
+}
+
+#search, #search-button {
+  color: black;
+}
+
+
 
 @media (min-width:1800px) {
   .right-bracket {

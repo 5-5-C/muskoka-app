@@ -10,6 +10,10 @@
       <div class="submit-button">
         <%= link_to "SUBMIT YOUR ENTRY", new_entry_path, class:"button-main" %>
       </div>
+      <%= form_tag(entries_path, :method => "get", id: "search-form") do %>
+      <%= select_tag :search, options_for_select(["Algonquin Park","Almaguin Highlands","Loring-Restoule","Muskoka","Parry Sound"]) %>
+      <%= submit_tag "Search", id: "search-button" %>
+      <% end %>
     </div>
     <div class="col-md-3 col-sm-3">
       <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg">

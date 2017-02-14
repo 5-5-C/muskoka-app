@@ -22,5 +22,9 @@ class Entry < ApplicationRecord
     end
   end
 
+  def self.search(search)
+   where("location LIKE ?", "%#{search}%")
+  end
+
 
 end
