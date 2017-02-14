@@ -30,8 +30,15 @@ $darkgrey: #2c2d2d;
 }
 
 .name-field {
-  width: 400px !important;
   text-align: center;
+}
+
+i.fa-pencil-square-o {
+  display: block;
+}
+
+#user_postal_code {
+  margin-top: 20px;
 }
 
 .entry-instructions {
@@ -279,6 +286,16 @@ textarea {
   }
 }
 
+.sort-by {
+  background-color: white;
+  h3 {
+    display: inline;
+  }
+}
+
+.sort-text {
+  margin: 20px;
+}
 // @media (max-width: 1200px) and (min-width: 991px) {
 //   #avatar-upload {
 //     top: 48px;

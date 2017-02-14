@@ -50,10 +50,9 @@ class UsersController < ApplicationController
     # TODO: clean this entire section up
     @user = current_user
     @entry = Entry.new(user_params["entry"])
-    if @entry.location == "Some other great Canadian Wildrness"
+    if @entry.location == "Another Spot in the Great Canadian Wilderness" || @entry.location == "Please Select Where Your Memory is From"
       @entry.location = nil
     end
-    raise 'hit'
     @entry.user_id = current_user.id
     if @user.update_attributes(only_user_params)
       @entry.name = current_user.name
