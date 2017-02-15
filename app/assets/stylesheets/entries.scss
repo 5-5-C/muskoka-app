@@ -46,6 +46,13 @@ $darkgrey: #2c2d2d;
 
 .sort-row {
   margin-top: 80px;
+  background-color: white;
+}
+
+.sort-text {
+  h3 {
+    display: inline;
+  }
 }
 
 .entry-top-text {
@@ -321,6 +328,16 @@ $darkgrey: #2c2d2d;
     &:before {
       height: 500px;
     }
+  }
+}
+
+@media (max-width: 990px) {
+  h3.text-right {
+    text-align: center;
+  }
+
+  .sort-text {
+    text-align: center;
   }
 }
 
