@@ -175,7 +175,7 @@ $secondary4: #e5e3e3;
 }
 
 .filter-background {
-  background-color: $primary3;
+  background-color: white;
 }
 
 #entry_image img {
@@ -183,6 +183,20 @@ $secondary4: #e5e3e3;
   margin-top: 40px;
   border: 5px solid $secondary4;
   border-radius: 5px;
+  position: relative;
+}
+
+#entry_image {
+  position: relative;
+}
+
+.image-hashtag {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
 }
 
 .filter-button {

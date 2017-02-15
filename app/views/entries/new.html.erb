@@ -1,28 +1,49 @@
 <%= form_for(@user, url: update_user_url) do |t| %>
 <div class="entry-instructions">
   <div class="container-fluid entry-top">
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @entry.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="row entry-row">
       <div class="col-lg-3 col-lg-offset-1 photo-column">
         <img id="suyc-entry" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
       </div>
       <div class="col-lg-6">
         <h1 class="vertical-text">ENTER TO WIN A 1 WEEK VACATION FOR 4 FRIENDS TO THE GREAT CANADIAN WILDERNESS NORTH OF TORONTO!</h1>
-        <h2 class="center-text">Step 1: Tell us your name and select a password:</h2>
+        <h2 class="center-text">Step 1: Tell us your name, postal code, and select a password:</h2>
         <div class="user-form">
           <div class="field">
-            <%= t.text_field :name, placeholder: "First Name", :class => "black-text name-field" %>
+            <%= t.text_field :name, required: true, placeholder: "First Name", :class => "black-text name-field" %>
           </div><br>
-          <% if current_user.provider == nil %>
-            <div class="field">
-              <%= t.password_field :password, placeholder: "Password", :class => "black-text name-field" %>
-            </div><br>
+          <div class="row">
+            <% if current_user.provider == nil %>
+              <div class="col-lg-6">
+                <div class="field">
+                  <%= t.password_field :password, required: true, placeholder: "Password", :class => "black-text name-field" %>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="field">
+                  <%= t.password_field :password_confirmation, required: true, placeholder: "Confirm Password", :class => "black-text name-field" %>
+                </div>
+              </div>
+            <% end %>
+            <div class="col-lg-6">
+              <div class="field">
+                <%= t.text_field :postal_code, required: true, placeholder: "Postal/Zip Code", :class => "black-text name-field" %>
+              </div>
+            </div>
 
-            <div class="field">
-              <%= t.password_field :password_confirmation, placeholder: "Confirm Password", :class => "black-text name-field" %>
-            </div><br>
-          <% end %>
-          <div class="field t_c">
-            <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="#">Terms & Conditions</a></h5>
+          </div>
+          <div class="field t_c entry-t-c">
+            <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="/rules">Terms & Conditions</a></h5>
             <%#= f.label :terms_of_service %>
             <%#= f.check_box :terms_of_service %>
           </div>
@@ -96,7 +117,9 @@
             <div class="row">
               <div class="col-md-offset-1 col-md-3 step step-3">
                 <h1 class="step-header">Step 3: </h1>
-                <h3>Tell us the story behind the photo.</h3>
+                <h3>Tell us the story behind the photo, and where it was taken.</h3>
+                <h1 class="step-header">My great Canadian memory is from: </h1>
+                <%= entry_form.select :location, ["Please Select Where Your Memory is From", "Algonquin Park", "Almaguin Highlands", "Loring-Restoule", "Muskoka", "Parry Sound", "Another Spot in the Great Canadian Wilderness"], {}, {class: "form-control"} %>
                 <i class="fa fa-pencil-square-o" aria-hidden="true" id="camera-upload"></i>
               </div>
 

@@ -50,6 +50,9 @@ class UsersController < ApplicationController
     # TODO: clean this entire section up
     @user = current_user
     @entry = Entry.new(user_params["entry"])
+    if @entry.location == "Another Spot in the Great Canadian Wilderness" || @entry.location == "Please Select Where Your Memory is From"
+      @entry.location = nil
+    end
     @entry.user_id = current_user.id
     if @user.update_attributes(only_user_params)
       @entry.name = current_user.name
@@ -57,7 +60,7 @@ class UsersController < ApplicationController
         redirect_to user_url(current_user)
       end
     else
-      render :edit
+      redirect_to new_entry_url
     end
   end
 
@@ -70,11 +73,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry: [:avatar, :title, :story])
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, entry: [:avatar, :title, :story, :location])
   end
 
   def only_user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :postal_code)
   end
 
 end

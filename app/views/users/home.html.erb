@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-md-offset-1 col-md-4">
 				<div class="hero-images">
-					<img src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg" alt="Rto12logo angled 01 a4euwt">
+					<img src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487091807/RTO12Logo_Angled_NEW-02_qqtdvc.png" alt="Rto12logo angled 01 a4euwt">
 				</div>
       </div>
     </div>
@@ -19,7 +19,7 @@
 							<%= render 'form' %>
 						</div>
             <div class="t_c home-page-agreement">
-              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="#">Terms & Conditions</a></h5>
+              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="/rules">Terms & Conditions</a></h5>
               <%#= f.label :terms_of_service %>
               <%#= f.check_box :terms_of_service %>
             </div>
@@ -100,14 +100,17 @@
             <% end %>
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
+          <div class="hover-content-bottom-right">
+            <%= link_to "SEE MORE", entry_path(entry) %>
+          </div>
         </div>
+        <% if entry.location != nil %>
+          <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
+        <% end %>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
           <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
           <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="twitter" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
-        </div>
-        <div class="hover-content-bottom-right">
-          <%= link_to "SEE MORE", entry_path(entry) %>
         </div>
       </div>
     <% end %>
@@ -134,14 +137,15 @@
             This is our Canada
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i></h3></span><br>
+          <div class="hover-content-bottom-right">
+            <%= link_to "SEE MORE", admin_index_path %>
+          </div>
         </div>
+        <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
           <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= admin.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= admin_path(admin) %>" data-type="facebook" data-description="This is <%= admin.name %>'s Canada" data-media="<%= admin.image %>"></a>
           <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= admin.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= admin_path(admin) %>" data-type="twitter" data-description="This is <%= admin.name %>'s Canada" data-media="<%= admin.image %>"></a>
-        </div>
-        <div class="hover-content-bottom-right">
-          <%= link_to "SEE MORE", admin_index_path %>
         </div>
       </div>
     <% end %>
@@ -171,14 +175,14 @@
             <% end %>
           </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
+          <div class="hover-content-bottom-right">
+            <%= link_to "SEE MORE", entry_path(entry) %>
+          </div>
         </div>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
           <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
           <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="twitter" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
-        </div>
-        <div class="hover-content-bottom-right">
-          <%= link_to "SEE MORE", entry_path(entry) %>
         </div>
       </div>
     <% end %>

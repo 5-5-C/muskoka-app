@@ -24,7 +24,6 @@ overflow-x: hidden;
 }
 
 .homepadborder {
-	margin-top: 4vh;
     background-color: rgba(0,0,0,0.7);
     background-size: cover;
     border: 5vh solid transparent;
@@ -110,6 +109,9 @@ div.email-capture-box {
 .hero-images {
   overflow: hidden;
   margin-top:13vh;
+	img {
+		max-width: 100%;
+	}
 }
 
 .logo {
@@ -382,6 +384,9 @@ input.email-only {
     .hover-content-bottom-right {
       display: block;
     }
+		.authentic-image-home {
+			display: block;
+		}
   }
 }
 
@@ -415,8 +420,8 @@ input.email-only {
 
 .hover-content-bottom-right {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: -16px;
+  left: 0px;
   display: none;
   color: white;
   font-family: $font-regular;
@@ -546,6 +551,15 @@ a.btn.btn-block.btn-social.btn-facebook {
 		text-align: center;
 }
 
+img.authentic-image-home {
+	max-width: 325px;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	position: absolute;
+	display: none;
+}
+
 //media quieries for home page
 
 @media (min-width: 1200px) {
@@ -610,6 +624,16 @@ a.btn.btn-block.btn-social.btn-facebook {
 	}
 }
 
+@media (max-width: 790px) {
+	a.navbar-brand {
+		img {
+			width: 180px;
+		}
+	}
+}
+
+
+
 @media (min-width: 600px) and (max-width: 760px) {
 	.vote-canada-button {
 		font-size: 1.2rem;
@@ -630,6 +654,11 @@ a.btn.btn-block.btn-social.btn-facebook {
 }
 
 @media (max-width: 600px) {
+
+	img.authentic-image-home {
+		max-width: 200px;
+		top: 100px;
+	}
 
 	div.facebook-login {
 		text-align: center;
@@ -682,7 +711,7 @@ a.btn.btn-block.btn-social.btn-facebook {
 		h1 {
 			font-size: 3rem;
 		}
-		
+
 	}
 
 	.vote-canada-button-top {

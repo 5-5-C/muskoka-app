@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207191849) do
+ActiveRecord::Schema.define(version: 20170214140339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170207191849) do
     t.string   "filter"
     t.string   "title"
     t.string   "filter_no_hashtag"
+    t.string   "location"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170207191849) do
     t.string   "uid"
     t.string   "oauth_token"
     t.string   "oauth_expires_at"
+    t.string   "postal_code"
   end
 
   create_table "votes", force: :cascade do |t|

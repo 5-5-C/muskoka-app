@@ -15,6 +15,20 @@
       <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg">
     </div>
   </div>
+  <div class="row sort-row">
+    <div class="col-md-4">
+      <h3 class="text-right">Sort Memories by: </h3>
+    </div>
+    <div class="col-md-8">
+      <div class="sort-text">
+        <h3><a href="/entries?utf8=✓&search=on&commit=Search">AUTHENTIC REGIONAL EXPERIENCES</a></h3>
+        <h3>
+          |
+        </h3>
+        <h3><a href="/entries">SHOW ALL MEMORIES</a></h3>
+      </div>
+    </div>
+  </div>
   <div class="row-wrapper">
 
     <% @entries.in_groups_of(4, false).each do |group| %>
@@ -37,6 +51,9 @@
                 </span><br>
                 <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span>
               </div>
+              <% if entry.location != nil %>
+                <img id="authentic-image" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487087448/AuthenticRegional_Logo_01-02_sj1t9v.png">
+              <% end %>
               <div class="hover-content-smaller">
                 <span class="hover-share">SHARE</span><br>
                 <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
