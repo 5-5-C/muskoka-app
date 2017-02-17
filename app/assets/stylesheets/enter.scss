@@ -338,6 +338,16 @@ textarea {
   h1.vertical-text {
     font-size: 2rem;
   }
+
+  .entry-top {
+    &:before {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .entry-row {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 @media (max-width: 600px) {
@@ -348,15 +358,5 @@ textarea {
 
   img.polaroid-home {
     max-width: 100%;
-  }
-
-  .entry-top {
-    &:before {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  .entry-row {
-    background-color: rgba(0, 0, 0, 0);
   }
 }
