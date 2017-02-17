@@ -591,6 +591,11 @@ img.authentic-image-home {
 
 
 @media (max-width: 990px) {
+	
+	section.top-section {
+		height: inherit;
+	}
+
 	.hero-images {
 		margin-top: 5vh;
 	}
