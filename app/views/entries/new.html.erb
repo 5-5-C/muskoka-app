@@ -17,7 +17,7 @@
       </div>
       <div class="col-lg-6">
         <h1 class="vertical-text">ENTER TO WIN A 1 WEEK VACATION FOR 4 FRIENDS TO THE GREAT CANADIAN WILDERNESS NORTH OF TORONTO!</h1>
-        <h2 class="center-text">Step 1: Tell us your name, postal code, and select a password:</h2>
+        <h2 class="center-text">Step 1: Tell us your name, current city, and select a password:</h2>
         <div class="user-form">
           <div class="field">
             <%= t.text_field :name, required: true, placeholder: "First Name", :class => "black-text name-field" %>
@@ -37,7 +37,7 @@
             <% end %>
             <div class="col-lg-6">
               <div class="field">
-                <%= t.text_field :postal_code, required: true, placeholder: "Postal/Zip Code", :class => "black-text name-field" %>
+                <%= t.text_field :postal_code, required: true, placeholder: "City", :class => "black-text name-field" %>
               </div>
             </div>
 
