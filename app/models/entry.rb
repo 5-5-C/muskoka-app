@@ -14,7 +14,6 @@ class Entry < ApplicationRecord
   validates :story, length: { maximum: 1500 }
   validates :title, presence: true
   validates :story, presence: true
-  validates :location, presence: true
 
   def clear_filtered_image
     if self.avatar_changed? && self.filter == true
