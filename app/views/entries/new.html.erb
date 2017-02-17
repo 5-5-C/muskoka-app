@@ -16,8 +16,8 @@
         <img id="suyc-entry" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
       </div>
       <div class="col-lg-6">
-        <h1 class="vertical-text">ENTER TO WIN A 1 WEEK VACATION FOR 4 FRIENDS TO THE GREAT CANADIAN WILDERNESS NORTH OF TORONTO!</h1>
-        <h2 class="center-text">Step 1: Tell us your name, current city, and select a password:</h2>
+        <h1 class="vertical-text">SHARE YOUR TRUE STORY OF THE TRUE NORTH TO WIN A TRIP HOME TO CELEBRATE CANADA’S 150TH BIRTHDAY IN THE SUMMER OF 2017!</h1>
+        <h2 class="center-text">Post your awesome memory (upload a cool photo and a few words) about your epic adventure in the great Canadian wilderness, invite you friends to vote for their favourite, and you’ll be entered to win! (Bonus points for stories about Algonquin Park, Muskoka and Georgian Bay) Sign up with email or your Facebook login – sharing life back home is easy!</h2>
         <div class="user-form">
           <div class="field">
             <%= t.text_field :name, required: true, placeholder: "First Name", :class => "black-text name-field" %>
@@ -37,7 +37,7 @@
             <% end %>
             <div class="col-lg-6">
               <div class="field">
-                <%= t.text_field :postal_code, required: true, placeholder: "City", :class => "black-text name-field" %>
+                <%= t.text_field :city, required: true, placeholder: "City", :class => "black-text name-field" %>
               </div>
             </div>
 
@@ -56,7 +56,7 @@
     <div class="container-fluid">
       <div class="row wrapper">
         <div class="col-md-offset-1 col-md-3 step">
-          <h1 class="step-header">Step 2: </h1>
+          <h1 class="step-header">UPLOAD YOUR PHOTO</h1>
           <h3>Choose a photo of your favourite Canadian wilderness adventure</h3>
           <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
         </div>
@@ -115,8 +115,8 @@
 
 
             <div class="row">
-              <div class="col-md-offset-1 col-md-3 step step-3">
-                <h1 class="step-header">Step 3: </h1>
+              <div class="col-md-offset-1 col-md-4 step step-3">
+                <h1 class="step-header">TELL US YOUR STORY</h1>
                 <h3>Tell us the story behind the photo, and where it was taken.</h3>
                 <h1 class="step-header">My great Canadian memory is from: </h1>
                 <%= entry_form.select :location, ["Please Select Where Your Memory is From", "Algonquin Park", "Almaguin Highlands", "Loring-Restoule", "Muskoka", "Parry Sound", "Another Spot in the Great Canadian Wilderness"], {}, {class: "form-control"} %>

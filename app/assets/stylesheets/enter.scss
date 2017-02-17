@@ -19,6 +19,7 @@ $darkgrey: #2c2d2d;
 
 .entry-row {
   padding-top: 75px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .photo-column {
@@ -37,7 +38,7 @@ i.fa-pencil-square-o {
   display: block;
 }
 
-#user_postal_code {
+#user_city {
   margin-top: 20px;
 }
 
@@ -49,6 +50,7 @@ i.fa-pencil-square-o {
     font-weight: 700;
     text-align: center;
     padding-bottom: 20px;
+    font-size: 24px;
   }
   h1 {
     font-family: $font-regular;
@@ -108,14 +110,12 @@ i.fa-pencil-square-o {
 }
 
 .entry-top {
-  padding-bottom: 80px;
   padding-top: 40px;
   overflow: hidden;
   position: relative;
-  height: 88vh;
+  height: 100%;
 
   &:before {
-    background-color: rgba(0, 0, 0, 0.29);
     content: "";
     position: absolute;
     left: 0;
@@ -168,7 +168,7 @@ textarea {
 
 .vertical-text {
   margin-top:40px;
-  font-size:5rem;
+  font-size:3.5rem;
   font-family: $font-regular;
   font-weight: 700;
   text-align: center;
@@ -267,7 +267,11 @@ textarea {
 
 @media (max-width: 1200px) {
   .vertical-text {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  h2.center-text {
+    font-size: 20px;
   }
 
   .entry-row {
@@ -321,9 +325,10 @@ textarea {
     padding-top: 50px;
   }
   .entry-top {
-    height: 810px;
+    height: 168vh;
     h2 {
     color: white;
+    font-size: 16px;
     }
   }
   .vertical-text {
@@ -343,5 +348,15 @@ textarea {
 
   img.polaroid-home {
     max-width: 100%;
+  }
+
+  .entry-top {
+    &:before {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .entry-row {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
