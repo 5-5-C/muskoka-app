@@ -41,8 +41,10 @@
                 <li id="new">
                   <% if current_user %>
                     <%= link_to 'Enter', new_entry_path %>
-                  <% else %>
+                  <% elsif request.fullpath == "/" %>
                     <%= link_to 'Enter', "#enter-now", id:"enter-nav-scroll" %>
+                  <% else %>
+                    <%= link_to 'Enter', root_path %>
                   <% end %>
                 </li>
                 <li id="entries"><%= link_to 'Vote', entries_path %></li>
