@@ -340,13 +340,16 @@ textarea {
   }
 
   .entry-top {
+    height: inherit;
     &:before {
       background-color: rgba(0, 0, 0, 0.3);
+      height: 400vh;
     }
   }
 
   .entry-row {
     background-color: rgba(0, 0, 0, 0);
+    height: inherit;
   }
 }
 
