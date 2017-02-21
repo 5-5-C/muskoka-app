@@ -11,6 +11,16 @@
         </ul>
       </div>
     <% end %>
+    <% if @entry.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @entry.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="row entry-row">
       <div class="col-lg-3 col-lg-offset-1 photo-column">
         <img id="suyc-entry" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
@@ -58,6 +68,7 @@
         <div class="col-md-offset-1 col-md-3 step">
           <h1 class="step-header">UPLOAD YOUR PHOTO</h1>
           <h3>Choose a photo of your favourite Canadian wilderness adventure</h3>
+          <h3>Photo must be larger than 2 megabyes</h3>
           <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
         </div>
         <div class="col-md-4 col-sm-12 photo-column">

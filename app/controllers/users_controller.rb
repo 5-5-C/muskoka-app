@@ -57,6 +57,8 @@ class UsersController < ApplicationController
       @entry.name = current_user.name
       if @entry.save
         redirect_to user_url(current_user)
+      else
+        redirect_to new_entry_url
       end
     else
       redirect_to new_entry_url
