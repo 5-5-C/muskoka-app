@@ -579,6 +579,14 @@ img.authentic-image-home {
 		padding-left: 8px;
 	}
 
+	.hero-images {
+		img {
+			max-width: 80% !important;
+			margin-left: 40px;
+		}
+
+	}
+
 }
 @media (max-width: 1200px) {
 	.tourism-bottom h1 {
