@@ -3,22 +3,22 @@
 <section class="top-section">
   <div class="container-fluid top-container">
 		<div class="row">
-			<div class="col-md-offset-1 col-md-4">
+			<div class="col-md-offset-1 col-md-5">
 				<div class="hero-images">
 					<img src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487091807/RTO12Logo_Angled_NEW-02_qqtdvc.png" alt="Rto12logo angled 01 a4euwt">
 				</div>
       </div>
     </div>
 		<div class="row row-entry">
-			<div class="col-md-8 email-capture-box">
+			<div class="col-md-6 email-capture-box">
 				<div class="homepadborder">
 					<h1 class="herowhiteh1">HEY CANUCKS!</h1>
 					<h4 class="herowhiteh4">Share your favourite story about the great Canadian wilderness to celebrate Canada’s 150th and you could win a $20K trip home!</h4>
 						<div class="signup-form">
 							<%= render 'form' %>
 						</div>
-            <div class="t_c home-page-agreement">
-              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="/rules">Terms & Conditions</a></h5>
+            <div class="t_c home-page-agreement" id="enter-now">
+              <h5>By clicking Submit you acknowledge and agree to our <a class="text-link" href="/rules">Contest Rules</a> and <a class="text-link" href="/privacy">Privacy Terms and Conditions.</a></h5>
               <%#= f.label :terms_of_service %>
               <%#= f.check_box :terms_of_service %>
             </div>
@@ -34,7 +34,7 @@
       <div class="bracket-text">
         <h1 style="font-weight: 400;">SHARE YOUR CANADA</h1>
     		<h1>WIN YOUR ADVENTURE</h1>
-    		<h3>Explorers’ Edge wants to bring one lucky Canadian ex-pat back home to celebrate Canada’s 150th birthday and a few friends from your new country too!  To be entered, simply upload a photo and story of your epic time spent in the great Canadian wilderness – then share with your new friends in your new country to let them pick a favourite. 5 Finalists will be selected from the most number of votes and 1 Finalist will win the Grand Prize of an unforgettable trip to the great Canadian wilderness north of Toronto in the summer of 2017 – worth $20K CDN eh! Share your Canada and show your pride!</h3>
+    		<h3>Explorers’ Edge wants to bring one lucky Canadian ex-pat home to celebrate Canada’s 150th birthday and a few friends from your new country too!  To be entered, simply upload your great Canadian wilderness story and photo – then share with your friends in your new country to vote for your story to win. Five Finalists will be selected from the most number of votes and one Finalist will win the Grand Prize of an unforgettable trip to the great Canadian wilderness north of Toronto in the summer of 2017 – worth $20K CDN eh! Share your Canada and show your pride!</h3>
       <div class="your-adventure-button-bottom">
         <a href="/entries" class="button-main vote-canada-button-top">Vote for your favourite Canadian Story</a>
       </div>
@@ -47,7 +47,7 @@
   <div class="container-fluid">
     <img src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1486396186/Polaroid_uiq7pm.png" alt="Rto12logo angled 01 a4euwt" class="img-responsive img-biker">
     <div class="row">
-      <div class="col-md-8 col-md-offset-1">
+      <div class="col-md-6 col-md-offset-1">
         <h1>TRUE STORIES of the<br>TRUE NORTH</h1>
         <h3>Let the world take your word for it – not ours – on just how amazing Canada is! Post your story about your time spent in the great Canadian wilderness, about the stunning landscape, the sparkling waters, your time around a bonfire or on a dock, and then share your story with friends in your new country to let them decide which Canadian adventure is one they’d love to experience most.</h3>
         <div class="enter-to-win-button">
@@ -200,7 +200,8 @@
       <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h1>Create Your Own Adventure</h1>
-        <h4>Want to learn more about a vacation in the great Canadian wilderness just two hours north of Toronto? Sign up for our Travel Newsletter.</h4>
+        <h4 style="text-align:center">Want to learn more about a vacation in the great Canadian wilderness just two hours north of Toronto?</h4>
+		<h4 style="padding-right:10vh;text-align:center">Sign up for our Travel Newsletter.</h4>
         <div class="email-form">
           <%= render "emailform" %>
         </div>

@@ -55,7 +55,6 @@ div.email-capture-box {
 .herowhiteh4, .herowhiteh4-last {
 	color:#FFFFFF;
 	margin-top: 18px;
-	font-size: 26px;
 }
 
 
@@ -65,7 +64,7 @@ div.email-capture-box {
 
 .top-section {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1486157412/MainSection_Background_Updated_eplmya.jpg");
-  height: 105vh;
+  height: 130vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -110,10 +109,12 @@ div.email-capture-box {
 
 .hero-images {
   overflow: hidden;
-  margin-top:13vh;
+  margin-top:20vh;
+  margin-bottom:10vh;
 	img {
 		max-width: 100%;
 	}
+  
 }
 
 .logo {
@@ -148,7 +149,7 @@ div.email-capture-box {
   h3 {
     color: white;
     font-family: $font-regular;
-		font-size: 2rem;
+		font-size: 18px
   }
 }
 
@@ -214,7 +215,7 @@ div.email-capture-box {
   h1 {
     font-family: $font-regular;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin-top: 0;
     padding: 90px 0px 0px;    color: white;
     letter-spacing: 0.3rem;
@@ -225,6 +226,7 @@ div.email-capture-box {
 		color: white;
 		padding-bottom: 50px;
 		padding-top: 20px;
+		font-size:18px
 		}
   .below {
     text-align: center;
@@ -241,7 +243,7 @@ div.email-capture-box {
 .bottom-hero-images {
 	max-width: 40%;
 	margin: auto;
-	margin-top: 4vh;
+	margin-top: -1vh;
 }
 
 .rules {
