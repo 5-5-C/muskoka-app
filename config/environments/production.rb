@@ -31,8 +31,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'localhost:3000',
-    user_name:            ENV['MUSKOKA_APP_EMAIL'],
-    password:             ENV['MUSKOKA_APP_PASSWORD'],
+    user_name:            ENV['gmail_username_contest'],
+    password:             ENV['gmail_password'],
     authentication:       'plain',
     enable_starttls_auto: true
   }
