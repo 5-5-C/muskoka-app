@@ -235,7 +235,8 @@ div.email-capture-box {
 .bottom-hero-images {
 	max-width: 40%;
 	margin: auto;
-	margin-top: -1vh;
+	margin-top: 4vh;
+	margin-bottom: 7vh;
 }
 
 .rules {
@@ -499,7 +500,7 @@ input.email-only {
 
 .tourism-bottom {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
-  height: 590px;
+  height: inherit;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -523,6 +524,11 @@ input.email-only {
     .button-container {
       text-align: center;
     }
+
+		.learn-more {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
 }
 
 .homepage-bottom-terms {
@@ -609,10 +615,6 @@ img.authentic-image-home {
 		display: none;
 	}
 
-	div.main-page {
-		text-align: center;
-	}
-
 	div.submit-form {
 		text-align: center;
 		padding-bottom: 15px;
@@ -636,6 +638,12 @@ img.authentic-image-home {
 		img {
 			width: 180px;
 		}
+	}
+}
+
+@media (max-width: 767px) {
+	div.main-page {
+		text-align: center;
 	}
 }
 
