@@ -4,6 +4,11 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all
+    if params[:search]
+      @entries = Entry.search(params[:search]).order("created_at DESC")
+    else
+      @entries = Entry.all.order('created_at DESC')
+    end
 
     respond_to do |format|
       format.html
@@ -18,6 +23,8 @@ class EntriesController < ApplicationController
   def new
     @entry = Entry.new(:user_id => params[:user])
     @user = current_user
+    @maximum_title_length = Entry.validators_on( :title ).first.options[:maximum]
+    @maximum_story_length = Entry.validators_on( :story ).first.options[:maximum]
   end
 
   def create
@@ -28,7 +35,7 @@ class EntriesController < ApplicationController
     if @entry.save
       redirect_to user_url(current_user)
     else
-      render :new
+      render "new"
     end
 
   end
@@ -53,6 +60,8 @@ class EntriesController < ApplicationController
   def edit
     @entry = Entry.find(params[:id])
     @user = current_user
+    @maximum_title_length = Entry.validators_on( :title ).first.options[:maximum]
+    @maximum_story_length = Entry.validators_on( :story ).first.options[:maximum]
 
     respond_to do |format|
       format.html
@@ -69,6 +78,7 @@ class EntriesController < ApplicationController
     @entry.assign_attributes(entry_params)
       if @entry.avatar_changed?
         @entry.filter = nil
+        @entry.filter_no_hashtag = nil
       end
 
       if @entry.save
@@ -91,7 +101,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:name, :story, :user_id, :avatar, :filter)
+    params.require(:entry).permit(:name, :story, :user_id, :avatar, :filter, :title, :filter_no_hashtag)
   end
 
 

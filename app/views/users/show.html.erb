@@ -1,18 +1,21 @@
+<% content_for :head do %>
+  <meta property="og:type"   content="article" />
+  <meta property="og:url"    content="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" />
+  <meta property="og:title"  content="This is <%= @user.entry.name %>'s Canada" />
+  <meta property="og:image"  content="<%= @user.entry.filter %>" />
+<% end %>
+
+
 <% if @user.entry %>
 <!-- if an entry exists -->
 
 <div class="container-fluid entry-show-main">
 
-  <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 this-is">
-    <div class="row this-is-row">
-      <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-4 col-xs-offset-2 this-is-text">
-        <span class="left-bracket"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %></span>
-        <h1>This is<br>
-           &nbsp;&nbsp;&nbsp;Your</h1>
+  <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 this-is profile">
+    <div class="row this-is-row profile">
+      <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 this-is-text">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485128691/RTO12Logo_01-05_crpoun.svg") %>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4 maple-leaf">
-        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
-        <span class="right-bracket"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %></span>
       </div>
     </div>
 
@@ -39,16 +42,17 @@
     </div>
     <div class="col-md-5 col-sm-5 user-story">
       <%= @user.entry.story %><br>
+      <% if @user.id == current_user.id %>
       <div class="submit-button button-red">
         <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
       </div>
+      <% end %>
       <div class="vote-count">
         <h1>Total Votes: <%= @user.entry.votes.count %></h1>
         <div class="row">
           <div class="col-md-4 sharing">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="facebook" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
+            <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="twitter" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
           </div>
           <div class="col-md-8"><h4>Share your entry and receive 10 extra votes!</h4></div>
         </div>
@@ -63,17 +67,6 @@
       <div class="test-your-knowledge">
         <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
         <button>TAKE THE QUIZ</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid challenge-section">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="challenge-friends">
-        <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
-        <button>SHARE CHALLENGE</button>
       </div>
     </div>
   </div>
@@ -99,20 +92,22 @@
     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1">
       <div id="entry_image">
         <%= image_tag(@user.entry.avatar_url) %>
+        <h3 class="image-hashtag">#SHAREYOURCANADA150</h3>
       </div>
       <div class="buttons-container">
-         <button class="filter-button">al_dente</button>
-         <button class="filter-button">athena</button>
-         <button class="filter-button">aurora</button>
-         <button class="filter-button">daguerre</button>
-         <button class="filter-button">eucalyptus</button>
-         <button class="filter-button">fes</button>
+         <button class="filter-button" data-filter="al_dente">al dente</button>
+         <button class="filter-button" data-filter="athena">athena</button>
+         <button class="filter-button" data-filter="aurora">aurora</button>
+         <button class="filter-button" data-filter="daguerre">daguerre</button>
+         <button class="filter-button" data-filter="eucalyptus">eucalyptus</button>
+         <button class="filter-button" data-filter="fes">fes</button>
       </div>
 
 
       <% if @user.entry %>
         <%= form_for @user.entry, :method => :PUT do |f| %>
           <%= f.hidden_field :filter, id: "hidden-filter-send" %>
+          <%= f.hidden_field :filter_no_hashtag, id: "hidden-filter-no-hashtag" %>
           <%= f.submit 'Save Filter', id: "save-filter", class: "button-main" %>
         <% end %>
       <% end %>
@@ -123,15 +118,16 @@
           <div class="story">
             <%= @user.entry.story %>
           </div>
+          <% if @user.id == current_user.id %>
           <div class="submit-button button-red">
             <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
           </div>
+          <% end %>
           <div class="vote-count">
             <h1>Total Votes: <%= @user.entry.votes.count %></h1>
             <div class="sharing">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="facebook" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
+              <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @user.entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@user.entry) %>" data-type="twitter" data-description="This is <%= @user.entry.name %>'s Canada" data-media="<%= @user.entry.filter %>"></a>
               <h2>Share your entry and receive 10 extra votes!</h2>
             </div>
           </div>
@@ -145,17 +141,6 @@
             <div class="test-your-knowledge">
               <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
               <button>TAKE THE QUIZ</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container-fluid challenge-section">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="challenge-friends">
-              <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
-              <button>SHARE CHALLENGE</button>
             </div>
           </div>
         </div>

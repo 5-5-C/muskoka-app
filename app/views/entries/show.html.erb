@@ -1,3 +1,11 @@
+<% content_for :head do %>
+  <meta property="og:type"   content="article" />
+  <meta property="og:url"    content="https://show-us-your-canada.herokuapp.com<%= entry_path(@entry) %>" />
+  <meta property="og:title"  content="This is <%= @entry.name %>'s Canada" />
+  <meta property="og:image"  content="<%= @entry.filter %>" />
+<% end %>
+
+
 <div class="container-fluid entry-show-main">
 
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 this-is">
@@ -15,10 +23,10 @@
 
   </div>
 
-  <% if @entry.filter %>
+  <% if @entry.filter_no_hashtag %>
 
   <style media="screen">
-    .entry-show-main { background-image: url(<%= @entry.filter %>); }
+    .entry-show-main { background-image: url(<%= @entry.filter_no_hashtag %>); }
   </style>
 
   <% else %>
@@ -39,9 +47,14 @@
       <% else %>
         <%= image_tag(@entry.avatar_url) %>
       <% end %>
+      <h3 class="image-hashtag">#SHAREYOURCANADA150</h3>
     </div>
     <div class="col-md-5 col-sm-5 entry-story">
-      <h1>Story Title</h1>
+      <% if @entry.title %>
+      <h1><%= @entry.title %></h1>
+      <% else %>
+      <h1>This is my Canada</h1>
+      <% end %>
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>
@@ -50,9 +63,8 @@
   <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 voting status">
     <div class="vote-count row">
       <span class="hover-share">SHARE</span><br>
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-      <i class="fa fa-facebook" aria-hidden="true"></i>
-      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= @entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@entry) %>" data-type="facebook" data-description="This is <%= @entry.name %>'s Canada" data-media="<%= @entry.filter %>"></a>
+      <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= @entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(@entry) %>" data-type="twitter" data-description="This is <%= @entry.name %>'s Canada" data-media="<%= @entry.filter %>"></a>
       <h2>Total Votes: <%= @entry.votes.where(email_confirmed: true).count %></h2>
     <% if current_user && current_user.entry == @entry %>
       <h3><em>This is your submission</em></h3>
@@ -73,7 +85,7 @@
             </div>
             <div class="modal-body">
               <%= form_for([@entry, @vote]) do |f| %>
-                  <%= f.text_field :email, required: true, class:"well email-well" %><br><br>
+                  <%= f.text_field :email, required: true, placeholder: "Enter your email", class:"well email-well" %><br><br>
                   <%= f.submit "Vote for #{@entry.name.partition(" ").first}", class:"button-main", id:"vote-for" %>
                   <h4>You will be emailed a link to validate your vote. Please check your inbox to complete the voting process</h4>
               <% end %>

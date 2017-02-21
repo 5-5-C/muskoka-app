@@ -4,8 +4,11 @@
       var currentPage = $(location).attr('pathname').split('/').pop();
       var currentPageBase = $(location).attr('pathname').split('/')[1];
       console.log(currentPageBase);
+      console.log(currentPage);
 
-      if(isNaN(currentPage)){
+      if(currentPage == "edit") {
+        return false
+      } else if(isNaN(currentPage)){
 
         $('#navbar li').each(function () {
           var itemId = $(this).attr('id');
@@ -44,22 +47,8 @@
 
 
     $("#enter-nav-scroll").on("click", function(e) {
-      e.preventDefault();
-      console.log("scroll");
-
-      if (window.location.pathname == "/") {
-
-          var section = $(this).attr("href");
-          console.log(section);
-          $("html, body").animate({
-              scrollTop: $(section).offset().top
-          });
-
-      } else {
-
-        window.location.href = "/#enter-now"
-
-      }
+      e.preventDefault()
+      $("body").scrollTo(0,500);
 
     });
 

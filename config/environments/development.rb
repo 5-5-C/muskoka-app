@@ -39,7 +39,8 @@ Rails.application.configure do
     user_name:            ENV['MUSKOKA_APP_EMAIL'],
     password:             ENV['MUSKOKA_APP_PASSWORD'],
     authentication:       'plain',
-    enable_starttls_auto: true  }
+    enable_starttls_auto: true
+  }
 
   config.action_mailer.perform_deliveries = true
 

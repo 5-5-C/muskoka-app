@@ -17,13 +17,13 @@ $secondary4: #e5e3e3;
   background-size: cover;
 }
 
-.log-in {
-  text-align: left !important;
+div.log-in {
+  text-align: left;
 }
 
 .log-in-form {
   margin-bottom: 80px;
-  margin-top: 80px;
+  margin-top: 120px;
   background: white;
   padding-bottom: 30px;
   border-radius: 5px;
@@ -33,8 +33,9 @@ $secondary4: #e5e3e3;
   }
 }
 
-.password-field {
+div.password-field {
   margin-top: 10px;
+  text-align: left;
 }
 
 .account {
@@ -68,5 +69,39 @@ $secondary4: #e5e3e3;
       color: $primary1 !important;
       text-decoration: none;
     }
+  }
+}
+
+.error-container {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  margin-top: 50px;
+}
+
+.account-row {
+  padding: 70px 20px;
+  h1 {
+    color: white;
+  }
+}
+
+.error_messages {
+  color: white;
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+  .facebook-login-column {
+    margin-left: 25px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .facebook-login-column {
+    padding-top: 15px;
+  }
+
+  div.log-in {
+    text-align: center;
   }
 }

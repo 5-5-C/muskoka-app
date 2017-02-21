@@ -2,16 +2,29 @@
 
   <div class="row">
     <div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1 entry-top-text">
-      <h1>CAST YOUR VOTE</h1>
-      <h4>Donec bibendum accumsan fringilla. Sed quam magna, viverra sit amet volutpat blandit, consequat in nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h4>
-      <br>
-      <h4>Have an even better story to share?</h4>
+      <h1>CAST YOUR VOTE!</h1>
+      <h4>Help send your favourite Canadian ex-pat home for Canada’s 150th birthday!</h4>
+      <h4>Discover more about Canada from their passionate stories and vote for your favourite.</h4>
       <div class="submit-button">
-        <%= link_to "SUBMIT YOUR ENTRY", new_entry_path(current_user), class:"button-main" %>
+        <%= link_to "ENTER YOUR MEMORY NOW", new_entry_path, class:"button-main" %>
       </div>
     </div>
     <div class="col-md-3 col-sm-3">
-      <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
+      <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg">
+    </div>
+  </div>
+  <div class="row sort-row">
+    <div class="col-md-4">
+      <h3 class="text-right">Sort Memories by: </h3>
+    </div>
+    <div class="col-md-8">
+      <div class="sort-text">
+        <h3><a href="/entries?utf8=✓&search=on&commit=Search">REGIONAL EXPERIENCES</a></h3>
+        <h3>
+          |
+        </h3>
+        <h3><a href="/entries">SHOW ALL MEMORIES</a></h3>
+      </div>
     </div>
   </div>
   <div class="row-wrapper">
@@ -20,21 +33,29 @@
       <div class="row">
         <% group.each do |entry| %>
             <div class="col-md-3 col-sm-6 col-xs-12 all-images" data-link="<%= entry_path(entry) %>">
-              <% if entry.filter %>
-                <%= link_to image_tag(entry.filter) %>
+              <% if entry.filter_no_hashtag %>
+                <%= link_to image_tag(entry.filter_no_hashtag), lazy: true %>
               <% else %>
-                <%= link_to image_tag(entry.avatar_url) %>
+                <%= link_to image_tag(entry.avatar_url), lazy: true %>
               <% end %>
               <div class="hover-content-smaller-top">
                 <span class="hover-user smaller"><%= entry.user.name %></span><br>
-                <span class="hover-title smaller">TITLE HEADER POST</span><br>
+                <span class="hover-title smaller">
+                  <% if entry.title %>
+                    <%= entry.title %>
+                  <% else %>
+                    This is my Canada
+                  <% end %>
+                </span><br>
                 <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span>
               </div>
+              <% if entry.location != nil %>
+                <img id="authentic-image" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487365509/Updated_Regional_Logo_01-02_a83j3k.png">
+              <% end %>
               <div class="hover-content-smaller">
                 <span class="hover-share">SHARE</span><br>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
+                <a href="#" class="prettySocial fa fa-twitter" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="twitter" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
               </div>
           </div>
         <% end %>

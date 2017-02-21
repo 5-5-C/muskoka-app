@@ -12,9 +12,20 @@
         <%= password_field_tag :password %>
       </div>
       <br>
-      <div class="actions log-in"><%= submit_tag "Log in", id:"login-button" %></div>
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="actions log-in">
+            <%= submit_tag "Log in", id:"login-button" %>
+          </div>
+        </div>
+        <div class="col-sm-8 facebook-login-column">
+          <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
+            <span class="fa fa-facebook"></span> Or Sign in with Facebook
+          </a>
+        </div>
+      </div>
     <% end %>
     <h1>Or Create Account</h1>
-    <button class="account" id="signup-link"><a href="/#enter-now">SIGN UP</button>
+    <button class="account" id="signup-link"><a href="/">SIGN UP</button>
   </div>
 </div>
