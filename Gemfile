@@ -39,6 +39,8 @@ gem "lazyload-rails"
 
 gem "figaro"
 
+gem 'file_validators'
+
 
 # Use for easy email sending
 gem 'sendgrid-ruby'
