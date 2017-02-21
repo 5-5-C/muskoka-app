@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/rules' => 'rules#index'
 
+  get '/privacy' => 'rules#privacy'
+
   resources :users, only: [:new, :create, :edit, :show, :destroy]
 
   resources :admin, only: [:new, :create, :show]
