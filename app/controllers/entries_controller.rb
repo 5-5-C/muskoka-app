@@ -46,7 +46,7 @@ class EntriesController < ApplicationController
     # if current_user
       @vote = @entry.votes.build
     # end
-
+    @quiz = Quiz.new
     respond_to do |format|
       format.html
       format.js

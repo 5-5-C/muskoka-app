@@ -29,7 +29,7 @@ Rails.application.routes.draw do
         get :confirm_email
       end
     end
-    resources :quizes, only: [:create, :destroy] do
+    resources :quizzes, only: [:create, :destroy] do
       member do
         get :confirm_email
       end

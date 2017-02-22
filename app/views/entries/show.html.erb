@@ -166,8 +166,11 @@
        </div>
        <div class="quiz" id="quiz5" data-toggle="buttons">
          <div class="quiz finished">
-           <h3>All done, click here to submit and will send a confirmation email to you. Click on that and the votes are yours!</h3>
-           <button type="button" name="button" class="btn btn-primary">Submit</button>
+           <%= form_for([@entry, @quiz]) do |f| %>
+               <%= f.text_field :email, required: true, placeholder: "Enter your email", class:"well email-well" %><br><br>
+               <%= f.submit "Vote for #{@entry.name.partition(" ").first}", class:"button-main", id:"quiz-for" %>
+               <h4>You will be emailed a link to validate your vote. Please check your inbox to complete the voting process</h4>
+           <% end %>
          </div>
       </div>
        </div>
