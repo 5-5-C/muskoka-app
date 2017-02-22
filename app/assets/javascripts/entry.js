@@ -76,6 +76,63 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
 
 });
 
+
+    var loading = $('#loadbar').hide();
+    $(document)
+    .ajaxStart(function () {
+        loading.show();
+    }).ajaxStop(function () {
+    	loading.hide();
+    });
+
+    var count = 0
+
+    $("label.btn").on('click',function () {
+    	var choice = $(this).find('input:radio').val();
+    	$('#loadbar').show();
+    	$('#quiz').fadeOut();
+      $('#quiz' + count).fadeOut();
+      count += 1
+    	setTimeout(function(){
+           $( "#answer" ).html(  $(this).checking(choice) );
+            $('#quiz' + count ).show();
+            $('#loadbar').fadeOut();
+            if (count == 1) {
+              $('#qid').html("2")
+              $('#question-text').html("What geological formation is the muskokas sitatued on?")
+            } else if (count == 2) {
+              $('#qid').html("3")
+              $('#question-text').html("What kind of cloud is typically found above a mountain?")
+            } else if (count == 3) {
+              $('#qid').html("4")
+              $('#question-text').html("What kind of fog is in Toronto right now!")
+            } else if (count == 4) {
+              $('#qid').html("5")
+              $('#question-text').html("What kind of cloud creates lightning!")
+            } else {
+              $('#qid').html(":)")
+              $('#question-text').html(" All done!")
+            }
+           /* something else */
+    	}, 1500);
+    });
+
+    $ans = 'Five-lined Skink';
+    $ans1 = 'The Canadian Shield'
+    $ans2 = 'lenticular clouds'
+    $ans3 = 'Advective fog'
+    $ans4 = 'Cumulonimbus cloud'
+
+    $.fn.checking = function(ck) {
+      console.log(ck);
+        if (ck != $ans && ck != $ans1 && ck != $ans2 && ck != $ans3 && ck != $ans4)
+            return 'INCORRECT';
+        else
+            return 'CORRECT';
+    };
+
+
+
   // $('#update-user-submit').on('click',function(){
   //   $('.story-submit').trigger('click')
   // });
