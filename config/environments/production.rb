@@ -31,7 +31,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp-relay.gmail.com',
     port:                 587,
-    domain:               'localhost:3000',
+    domain:               'www.shareyourcanada150.ca',
     user_name:            ENV['gmail_username_contest'],
     password:             ENV['gmail_password'],
     authentication:       'plain',
