@@ -6,7 +6,7 @@
       console.log(currentPageBase);
       console.log(currentPage);
 
-      if(currentPage == "edit") {
+      if(currentPage == "edit" || currentPage == "new") {
         return false
       } else if(isNaN(currentPage)){
 

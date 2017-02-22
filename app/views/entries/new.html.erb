@@ -163,6 +163,7 @@
             var counterlarge = $("#counter_large")
             var max_length  = counter.data("maximum-length");
             var max_length_story = counterlarge.data("maximum-story-length") - 10;
+            console.log('hello');
 
             counter.text(max_length - $("#title_text").val().length);
             counterlarge.text(max_length_story - $("#story-box").val().length);
