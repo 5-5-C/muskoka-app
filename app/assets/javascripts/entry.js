@@ -19,11 +19,6 @@ $('.prettySocial').prettySocial();
           }
         }
 
-        $("#avatar-upload").change(function(){
-          console.log("changing");
-          $(".upload-label").empty();
-          $(".upload-label").append("Upload Complete");
-        });
 
 
 
@@ -67,6 +62,19 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
     });
 
   }
+
+  $('#avatar-upload').bind('change', function(e) {
+
+  //this.files[0].size gets the size of your file.
+  if (this.files[0].size < 2000000) {
+    e.preventDefault()
+    alert("Image must be larger then 2 megabytes!")
+  } else {
+    $(".upload-label").empty();
+    $(".upload-label").append("Upload Complete");
+  };
+
+});
 
   // $('#update-user-submit').on('click',function(){
   //   $('.story-submit').trigger('click')
