@@ -14,7 +14,7 @@ class VotesController < ApplicationController
 
     # @entry = Entry.find(params[:id])
 
-
+    @quiz = Quiz.new
    if @entry.votes.where(voter_ip: request.remote_ip).empty?
         @vote = @entry.votes.build(vote_params)
         # @vote.entry_id = @entry.id

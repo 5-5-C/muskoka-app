@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_one :entry
   has_one :vote
+  has_one :quiz
   has_one :entry_vote, class_name: "Entry", through: :vote
 
   # validates :name, :password_digest, :postal_code, :on => :update, presence: true

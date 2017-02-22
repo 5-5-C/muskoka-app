@@ -68,7 +68,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
   //this.files[0].size gets the size of your file.
   if (this.files[0].size < 2000000) {
     e.preventDefault()
-    alert("Image must be larger then 2 megabytes!")
+    alert("Your photo is not high enough quality, please upload an image larger then 2 megabytes")
   } else {
     $(".upload-label").empty();
     $(".upload-label").append("Upload Complete");
@@ -124,14 +124,11 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
     $ans4 = 'Cumulonimbus cloud'
 
     $.fn.checking = function(ck) {
-      console.log(ck);
         if (ck != $ans && ck != $ans1 && ck != $ans2 && ck != $ans3 && ck != $ans4)
             return 'INCORRECT';
         else
             return 'CORRECT';
     };
-
-
 
   // $('#update-user-submit').on('click',function(){
   //   $('.story-submit').trigger('click')

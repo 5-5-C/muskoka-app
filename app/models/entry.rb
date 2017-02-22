@@ -7,6 +7,7 @@ class Entry < ApplicationRecord
   belongs_to :user
   has_many :votes
   has_many :voter_users, class_name: "User", through: :votes
+  has_many :quizzes
 
   mount_uploader :avatar, AvatarUploader
   validates :avatar, file_size: { greater_than: 2.megabyte }

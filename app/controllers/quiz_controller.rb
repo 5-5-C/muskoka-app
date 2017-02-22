@@ -3,8 +3,8 @@ class QuizController < ApplicationController
   before_action :load_entry
 
   def create
-    if @entry.quizes.where(quiz_ip: request.remote_ip).empty?
-      @quiz = @entry.quizes.build(quiz_params)
+    if @entry.quizzes.where(quiz_ip: request.remote_ip).empty?
+      @quiz = @entry.quizzes.build(quiz_params)
       if @quiz.save
         QuizMailer.quiz_confirmation(@quiz).deliver
         redirect_to entries_path
