@@ -129,8 +129,6 @@
               <div class="col-md-offset-1 col-md-4 step step-3">
                 <h1 class="step-header">TELL US YOUR STORY</h1>
                 <h3>Tell us the story behind the photo, and where it was taken.</h3>
-                <h1 class="step-header">My great Canadian memory is from: </h1>
-                <%= entry_form.select :location, ["Please Select Where Your Memory is From", "Algonquin Park", "Almaguin Highlands", "Loring-Restoule", "Muskoka", "Parry Sound", "Another Spot in the Great Canadian Wilderness"], {}, {class: "form-control"} %>
                 <i class="fa fa-pencil-square-o" aria-hidden="true" id="camera-upload"></i>
               </div>
 
@@ -142,6 +140,8 @@
                 <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
                   <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
                 </div> -->
+                <h1 class="step-header">My great Canadian memory is from: </h1>
+                <%= entry_form.select :location, ["Please Select Where Your Memory is From", "Algonquin Park", "Almaguin Highlands", "Loring-Restoule", "Muskoka", "Parry Sound", "Another Spot in the Great Canadian Wilderness"], {}, {class: "form-control"} %>
                 <div class="actions">
                   <%= t.submit 'Submit', :id => "update-user-submit" %>
                 </div>

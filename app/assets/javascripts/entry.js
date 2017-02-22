@@ -72,6 +72,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
   } else {
     $(".upload-label").empty();
     $(".upload-label").append("Upload Complete");
+    alert("File succesfully uploaded!")
   };
 
 });
