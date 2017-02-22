@@ -179,10 +179,10 @@
           <div class="hover-content-bottom-right">
             <%= link_to "SEE MORE", entry_path(entry) %>
           </div>
-          <% if entry.location != nil %>
-            <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487365509/Updated_Regional_Logo_01-02_a83j3k.png">
-          <% end %>
         </div>
+        <% if entry.location != nil %>
+          <img class="authentic-image-home" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487365509/Updated_Regional_Logo_01-02_a83j3k.png">
+        <% end %>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
           <a href="#" class="prettySocial fa fa-facebook" data-title="This is <%= entry.name %>'s Canada" data-url="https://show-us-your-canada.herokuapp.com<%= entry_path(entry) %>" data-type="facebook" data-description="This is <%= entry.name %>'s Canada" data-media="<%= entry.filter %>"></a>
