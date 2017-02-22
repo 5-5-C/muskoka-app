@@ -4,4 +4,10 @@ $( document ).on('turbolinks:load', function() {
       $("body").scrollTo(0,500);
   });
 
+  $(document).scroll(function(){
+    $('.arrow').css({
+      display: "none"
+    })
+  })
+
 })
