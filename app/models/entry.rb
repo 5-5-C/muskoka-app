@@ -10,7 +10,7 @@ class Entry < ApplicationRecord
   has_many :quizzes
 
   mount_uploader :avatar, AvatarUploader
-  validates :avatar, file_size: { greater_than: 2.megabyte }
+  validates :avatar, presence: true
 
   after_update :clear_filtered_image
 

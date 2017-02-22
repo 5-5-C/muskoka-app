@@ -74,13 +74,13 @@ class EntriesController < ApplicationController
 
   def update
     @entry = Entry.find(params[:id])
+    @user = current_user
 
     @entry.assign_attributes(entry_params)
       if @entry.avatar_changed?
         @entry.filter = nil
         @entry.filter_no_hashtag = nil
       end
-
       if @entry.save
         redirect_to user_path(current_user)
       else
@@ -95,7 +95,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
     @entry.destroy
     @user = current_user
-    redirect_to user_path(current_user)
+    redirect_to root_path
   end
 
   private
