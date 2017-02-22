@@ -27,6 +27,9 @@ $darkgrey: #2c2d2d;
   }
 }
 
+nav.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   padding: 2px 10px !important;
@@ -54,6 +57,7 @@ $darkgrey: #2c2d2d;
 .navbar-default {
   background-color: white !important;
   border-color: #7d7d7d !important;
+  border-width: 0 0 1px !important;
 }
 
 .navbar-default .active>a {
