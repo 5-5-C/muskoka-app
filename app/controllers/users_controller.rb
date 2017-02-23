@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     @entries = Entry.all
   end
 
+  def about
+    @email = Email.new
+    @user = User.new
+  end
+
   def new
     @user = User.new
   end
