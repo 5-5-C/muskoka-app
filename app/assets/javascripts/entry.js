@@ -45,7 +45,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
       var filtered_no_hashtag = FIRST + "upload/" + filterName + LAST
 
       // assign it to the image
-      $('#entry_image img').attr('src', filtered );
+      $('#entry_image img').attr('src', filtered_no_hashtag );
 
       // assign the newUrl to a variable that updates
       newUrl = $('#entry_image img').attr('src');
