@@ -126,13 +126,13 @@
 
 
             <div class="row">
-              <div class="col-md-offset-1 col-md-4 step step-3">
+              <div class="col-md-offset-1 col-md-3 step step-3">
                 <h1 class="step-header">TELL US YOUR STORY</h1>
                 <h3>Tell us the story behind the photo, and where it was taken.</h3>
                 <i class="fa fa-pencil-square-o" aria-hidden="true" id="camera-upload"></i>
               </div>
 
-              <div class="field col-md-offset-1 col-md-5">
+              <div class="field col-md-offset-2 col-md-5">
                 <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title', :class => "black-text" %>
                 <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
                 <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
