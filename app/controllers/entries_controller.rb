@@ -42,6 +42,8 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+    @email = Email.new
+    @user = User.new
 
     # if current_user
       @vote = @entry.votes.build
