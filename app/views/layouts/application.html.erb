@@ -122,4 +122,14 @@
     </div> -->
 
   </body>
+
+  <% if flash[:success] %>
+    <script type="text/javascript">
+      alert("Thank You for voting!")
+    </script>
+  <% elsif flash[:error] %>
+    <script type="text/javascript">
+      alert("Sorry. There was an error, you can only vote once per email!")
+    </script>
+  <% end %>
 </html>
