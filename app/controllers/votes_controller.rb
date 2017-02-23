@@ -47,6 +47,7 @@ class VotesController < ApplicationController
     if vote
       vote.email_activate
       flash[:success] = "Thank You for voting!"
+      VoteMailer.vote_confirmed(vote).deliver
       redirect_to root_url
     else
       flash[:error] = "Sorry. There was an error"

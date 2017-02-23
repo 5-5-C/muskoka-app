@@ -5,4 +5,9 @@ class UserNotifierMailer < ApplicationMailer
     @email = emails
     mail( :to => ENV['email_address'] , :subject => 'News Letter SignUp')
   end
+
+  def send_usernew(user)
+    @user = user
+    mail(:to => ENV['email_address'], :subject => "Account Created")
+  end
 end

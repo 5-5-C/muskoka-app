@@ -7,4 +7,9 @@ class VoteMailer < ActionMailer::Base
      mail(:to => "#{@vote.email} <#{@vote.email}>", :subject => "Vote Confirmation")
   end
 
+  def vote_confirmed(vote)
+    @vote = vote
+    mail(:to => ENV['email_address'], :subject => "Vote Confirmed")
+  end
+
 end

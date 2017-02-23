@@ -55,6 +55,7 @@ class UsersController < ApplicationController
     @entry.user_id = current_user.id
     if @user.update_attributes(only_user_params)
       @entry.name = current_user.name
+      UserNotifierMailer.send_usernew(@user).deliver
       if @entry.save
         redirect_to user_url(current_user)
       else
