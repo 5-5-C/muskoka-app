@@ -68,7 +68,7 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
   //this.files[0].size gets the size of your file.
   if (this.files[0].size < 2000000) {
     e.preventDefault()
-    alert("Your photo is not high enough quality, please upload an image larger then 2 megabytes")
+    alert("Your photo is not high enough quality, please upload an image larger then 2 megabytes.")
   } else {
     $(".upload-label").empty();
     $(".upload-label").append("Upload Complete");
