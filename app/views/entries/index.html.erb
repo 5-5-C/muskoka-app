@@ -2,9 +2,9 @@
 
   <div class="row">
     <div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1 entry-top-text">
-      <h1>CAST YOUR VOTE!</h1>
+      <h1>EXPERIENCE THE ADVENTURES</h1>
       <h4>Help send your favourite Canadian ex-pat home for Canada’s 150th birthday!</h4>
-      <h4>Discover more about Canada from their passionate stories and vote for your favourite.</h4>
+      <h4>Discover more about Canada from their passionate stories. Spend May voting for your favourite wilderness tale and help us pick a winner.</h4>
       <div class="submit-button">
         <%= link_to "ENTER YOUR MEMORY NOW", new_entry_path, class:"button-main" %>
       </div>
@@ -47,7 +47,7 @@
                     This is my Canada
                   <% end %>
                 </span><br>
-                <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span>
+                <!-- <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%# entry.votes.where(email_confirmed: true).count %> VOTES </h3></span> -->
               </div>
               <% if entry.location != nil %>
                 <img id="authentic-image" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1487365509/Updated_Regional_Logo_01-02_a83j3k.png">
