@@ -445,8 +445,12 @@ input.email-only {
   }
 }
 
-span.sign-in-facebook {
+span.sign-in-facebook, a.sign-in-facebook {
 	font-size: 3rem !important;
+}
+
+a.sign-in-facebook {
+	font-size: 4rem !important;
 }
 
 .hover-user {
