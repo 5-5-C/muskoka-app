@@ -641,7 +641,7 @@ img.authentic-image-home {
 
 @media (min-width: 761px) and (max-width: 990px) {
 	.vote-canada-button {
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 
 	a.navbar-brand {
@@ -657,6 +657,10 @@ img.authentic-image-home {
 			width: 180px;
 		}
 	}
+
+	.board-text {
+		padding-top: 190px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -669,7 +673,7 @@ img.authentic-image-home {
 
 @media (min-width: 600px) and (max-width: 760px) {
 	.vote-canada-button {
-		font-size: 1.2rem;
+		font-size: 2rem;
 	}
 
 	.vote-canada-button-top {
@@ -774,12 +778,12 @@ img.authentic-image-home {
 	}
 
 	.vote-canada-button {
-		font-size: 0.92rem;
+		font-size: 2rem;
 		padding: 8px 12px;
 	}
 
 	.board-text {
-		padding-top: 100px;
+		padding-top: 185px;
 	}
 
 	.footer h4 {
