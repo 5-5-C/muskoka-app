@@ -33,7 +33,7 @@
     <% @entries.in_groups_of(4, false).each do |group| %>
       <div class="row">
         <% group.each do |entry| %>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 all-images" data-link="<%= entry_path(entry) %>">
+            <div class="col-md-3 col-sm-6 col-xs-12 all-images" data-link="<%= entry_path(entry) %>">
               <% if entry.filter_no_hashtag %>
                 <%= link_to image_tag(entry.filter_no_hashtag), lazy: true %>
               <% else %>
