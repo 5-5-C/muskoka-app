@@ -25,6 +25,7 @@ class EntriesController < ApplicationController
     @user = current_user
     @maximum_title_length = Entry.validators_on( :title ).first.options[:maximum]
     @maximum_story_length = Entry.validators_on( :story ).first.options[:maximum]
+    @minimum_story_length = Entry.validators_on( :story ).first.options[:minimum]
   end
 
   def create

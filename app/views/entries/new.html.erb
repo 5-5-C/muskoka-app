@@ -161,8 +161,8 @@
               <div class="field col-md-offset-2 col-md-5">
                 <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title', :class => "black-text" %>
                 <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
-                <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
-                <h4 class="counter">Chars left: <span id="counter_large" data-maximum-story-length="<%= @maximum_story_length %>"><%= @maximum_story_length %></span></h4>
+                <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, minlength: @minimum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
+                <h4 class="counter">Minumum Words: <span id="counter_large" data-maximum-story-length="<%= @maximum_story_length %>" data-minimum-story-length="<%= @minimum_story_length %>"><%= @minimum_story_length %></span></h4>
                 <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
                   <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
                 </div> -->
@@ -189,17 +189,29 @@
             var counterlarge = $("#counter_large")
             var max_length  = counter.data("maximum-length");
             var max_length_story = counterlarge.data("maximum-story-length") - 10;
-            console.log('hello');
+            var min_length_story = counterlarge.data("minimum-story-length")
 
             counter.text(max_length - $("#title_text").val().length);
-            counterlarge.text(max_length_story - $("#story-box").val().length);
+            counterlarge.text(min_length_story - $("#story-box").val().length);
+            function wordCount( val ){
+              var wom = val.match(/\S+/g);
+              return {
+                  words : wom ? wom.length : 0,
+              };
+            }
 
             title_text.keyup(function() {
                 counter.text(max_length - $(this).val().length);
             });
 
             story_text.keyup(function() {
-                counterlarge.text(max_length_story - $(this).val().length);
+              var v = wordCount( this.value )
+              console.log(min_length_story);
+              if (min_length_story - v.words <= 0) {
+                counterlarge.text(max_length_story - v.words);
+              } else {
+                counterlarge.text(min_length_story - v.words);
+              }
             });
 
           });
