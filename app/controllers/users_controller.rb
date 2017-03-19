@@ -52,6 +52,7 @@ class UsersController < ApplicationController
   def update
 
     # TODO: clean this entire section up
+    raise 'hit'
     @user = current_user
     @entry = Entry.new(user_params["entry"])
     if @entry.location == "Another Spot in the Great Canadian Wilderness" || @entry.location == "Please Select Where Your Memory is From"
@@ -80,11 +81,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :postal_code, entry: [:avatar, :title, :story, :location])
+    params.require(:user).permit(:name, :last_name, :email, :password, :password_confirmation, :postal_code, entry: [:avatar, :title, :story, :location])
   end
 
   def only_user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :postal_code)
+    params.require(:user).permit(:name, :last_name, :email, :password, :password_confirmation, :postal_code, :country, :state, :city, :street, :terms_conditions)
   end
 
 end

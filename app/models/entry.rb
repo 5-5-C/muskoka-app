@@ -15,7 +15,13 @@ class Entry < ApplicationRecord
   after_update :clear_filtered_image
 
   validates :title, length: { maximum: 30 }
-  validates :story, length: { maximum: 1500 }
+  validates :story, length: {
+    maximum: 1500,
+    minimum: 30,
+    tokenizer: lambda { |str| str.scan(/\s+|$/) },
+    :too_short => "must have at least %{count} words",
+    :too_long  => "must have at most %{count} words"
+   }
   validates :title, presence: true
   validates :story, presence: true
 
