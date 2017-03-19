@@ -52,6 +52,7 @@ class UsersController < ApplicationController
   def update
 
     # TODO: clean this entire section up
+    raise 'hit'
     @user = current_user
     @entry = Entry.new(user_params["entry"])
     if @entry.location == "Another Spot in the Great Canadian Wilderness" || @entry.location == "Please Select Where Your Memory is From"

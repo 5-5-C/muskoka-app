@@ -221,6 +221,14 @@
               }
             });
 
+            $("#update-user-submit").on("click", function(e){
+              var v = wordCount( story_text.val() )
+              if (min_length_story - v.words > 0) {
+                e.preventDefault()
+                alert("Need at least 30 words for the story.")
+              }
+            });
+
           });
       </script>
       <% end %>
