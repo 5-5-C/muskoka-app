@@ -162,7 +162,8 @@
                 <%= entry_form.text_field :title, required: true, maxlength: @maximum_title_length, id: 'title_text', placeholder: 'Title', :class => "black-text" %>
                 <h4 class="counter">Chars left: <span id="counter" data-maximum-length="<%= @maximum_title_length %>"><%= @maximum_title_length %></span></h4>
                 <%= entry_form.text_area :story, required: true, maxlength: @maximum_story_length, minlength: @minimum_story_length, size: "0x15", placeholder: "Tell us the story!", id: "story-box", :class => "black-text" %><br>
-                <h4 class="counter">Minumum Words: <span id="counter_large" data-maximum-story-length="<%= @maximum_story_length %>" data-minimum-story-length="<%= @minimum_story_length %>"><%= @minimum_story_length %></span></h4>
+                <h4 class="counter" id="story-counter-show">Minumum Words: <span id="counter_large_show" data-maximum-story-length="<%= @maximum_story_length %>" data-minimum-story-length="<%= @minimum_story_length %>"><%= @minimum_story_length %></span></h4>
+                <h4 class="counter" id="story-counter-hidden">Chars left: <span id="counter_large_hidden" data-maximum-story-length="<%= @maximum_story_length %>" data-minimum-story-length="<%= @minimum_story_length %>"><%= @minimum_story_length %></span></h4>
                 <!-- <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
                   <%= entry_form.submit 'Submit', class: "button-main edit-button hide story-submit" %>
                 </div> -->
@@ -186,17 +187,21 @@
             var title_text = $("#title_text");
             var story_text = $("#story-box");
             var counter     = $("#counter");
-            var counterlarge = $("#counter_large")
+            var counterlargeshow = $("#counter_large_show")
+            var counterlargehidden = $("#counter_large_hidden")
+            var storyCounter = $("#story-counter-hidden")
+            var storyCounterShow = $("#story-counter-show")
             var max_length  = counter.data("maximum-length");
-            var max_length_story = counterlarge.data("maximum-story-length") - 10;
-            var min_length_story = counterlarge.data("minimum-story-length")
+            var max_length_story = counterlargeshow.data("maximum-story-length") - 10;
+            var min_length_story = counterlargeshow.data("minimum-story-length")
 
             counter.text(max_length - $("#title_text").val().length);
-            counterlarge.text(min_length_story - $("#story-box").val().length);
+            counterlargeshow.text(min_length_story - $("#story-box").val().length);
             function wordCount( val ){
               var wom = val.match(/\S+/g);
               return {
                   words : wom ? wom.length : 0,
+                  characters         : val.length,
               };
             }
 
@@ -208,9 +213,11 @@
               var v = wordCount( this.value )
               console.log(min_length_story);
               if (min_length_story - v.words <= 0) {
-                counterlarge.text(max_length_story - v.words);
+                storyCounter.css("display", "block")
+                storyCounterShow.css("display", "none")
+                counterlargehidden.text(max_length_story - v.characters);
               } else {
-                counterlarge.text(min_length_story - v.words);
+                counterlargeshow.text(min_length_story - v.words);
               }
             });
 
