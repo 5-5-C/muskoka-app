@@ -81,7 +81,7 @@
           </div>
           <div class="field t_c entry-t-c">
             <h5>I accept the <a class="text-link" href="/rules">Contest Terms and Conditions</a> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
-            <%= t.check_box :terms_conditions, {}, true, false %>
+            <%= t.check_box :terms_conditions, {required: true, checked: false}, true, false %>
           </div>
         </div>
       </div>
