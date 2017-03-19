@@ -216,6 +216,10 @@
                 storyCounter.css("display", "block")
                 storyCounterShow.css("display", "none")
                 counterlargehidden.text(max_length_story - v.characters);
+              } else if (min_length_story - v.words >= 0) {
+                counterlargeshow.text(min_length_story - v.words);
+                storyCounter.css("display", "none")
+                storyCounterShow.css("display", "block")
               } else {
                 counterlargeshow.text(min_length_story - v.words);
               }
