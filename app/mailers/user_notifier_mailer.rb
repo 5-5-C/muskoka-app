@@ -1,5 +1,5 @@
 class UserNotifierMailer < ApplicationMailer
-  default :from => 'admin@shareyourcanada150.ca'
+  default :from => 'admin@shareyourcanada150.com'
 
   def send_newsletter(emails)
     @email = emails

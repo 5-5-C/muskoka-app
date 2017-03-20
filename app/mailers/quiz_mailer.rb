@@ -1,6 +1,6 @@
 class QuizMailer < ApplicationMailer
 
-  default :from => "contest@shareyourcanada150.ca"
+  default :from => "contest@shareyourcanada150.com"
 
   def quiz_confirmation(quiz)
      @quiz = quiz

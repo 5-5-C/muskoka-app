@@ -1,5 +1,5 @@
 class VoteMailer < ActionMailer::Base
-    default :from => "contest@shareyourcanada150.ca"
+    default :from => "contest@shareyourcanada150.com"
 
   def vote_confirmation(vote)
      @vote = vote
