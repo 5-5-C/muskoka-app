@@ -5,6 +5,9 @@ class EmailController < ApplicationController
       UserNotifierMailer.send_newsletter(@email).deliver
       redirect_to root_url
       flash[:notice] = "Email succesfully sent!"
+    else
+      redirect_to root_url
+      flash[:notice] = "Something wen't wrong"
     end
   end
 
