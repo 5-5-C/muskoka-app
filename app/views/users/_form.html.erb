@@ -19,7 +19,6 @@
   <div class="col-lg-2 col-sm-4 submit-form">
     <div class="main-page">
       <%= f.submit 'Enter Now' %>
-      <% end %>
     </div>
   </div>
   <div class="col-lg-offset-1 col-lg-5 col-sm-8 facebook-login">
@@ -28,3 +27,8 @@
     </a>
   </div>
 </div>
+<div class="t_c home-page-agreement" id="enter-now">
+  <h5 class="home-checkbox-text">I accept the <a class="text-link" href="/rules">Contest Terms and Conditions</a> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
+  <%= f.check_box :terms_conditions, {required: true, checked: false, class: "home-checkbox"}, true, false %>
+</div>
+<% end %>
