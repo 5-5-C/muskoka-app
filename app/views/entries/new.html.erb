@@ -40,18 +40,6 @@
                 <%= t.text_field :last_name, required: true, placeholder: "Last Name", :class => "black-text name-field" %>
               </div><br>
             </div>
-            <% if current_user.provider == nil %>
-              <div class="col-lg-6">
-                <div class="field">
-                  <%= t.password_field :password, required: true, placeholder: "Password", :class => "black-text name-field" %>
-                </div><br>
-              </div>
-              <div class="col-lg-6">
-                <div class="field">
-                  <%= t.password_field :password_confirmation, required: true, placeholder: "Confirm Password", :class => "black-text name-field" %>
-                </div><br>
-              </div>
-            <% end %>
             <div class="col-lg-12">
               <div class="field">
                 <%= t.text_field :street, required: true, placeholder: "Street Address", :class => "black-text name-field" %>
@@ -77,6 +65,18 @@
                 <%= t.text_field :postal_code, required: true, placeholder: "Postal/Zip Code", :class => "black-text name-field" %>
               </div><br>
             </div>
+            <% if current_user.provider == nil %>
+              <div class="col-lg-6">
+                <div class="field">
+                  <%= t.password_field :password, required: true, placeholder: "Password", :class => "black-text name-field" %>
+                </div><br>
+              </div>
+              <div class="col-lg-6">
+                <div class="field">
+                  <%= t.password_field :password_confirmation, required: true, placeholder: "Confirm Password", :class => "black-text name-field" %>
+                </div><br>
+              </div>
+            <% end %>
 
           </div>
           <div class="field t_c entry-t-c">
@@ -153,7 +153,7 @@
             <div class="row">
               <div class="col-md-offset-1 col-md-3 step step-3">
                 <h1 class="step-header">TELL US YOUR STORY</h1>
-                <h3>Tell us the story behind the photo, and where it was taken.</h3>
+                <h3>Tell us the story behind the photo, and where it was taken (Must be longer than 30 words).</h3>
                 <i class="fa fa-pencil-square-o" aria-hidden="true" id="camera-upload"></i>
               </div>
 
