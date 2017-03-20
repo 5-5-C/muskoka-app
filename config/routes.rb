@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/admin/destroy/update' => 'admin#destroy', as: 'admin_destroy'
 
+  delete '/admin/destroy/:id' => 'admin#destroy_post'
+
   patch '/update_user' => 'users#update', as: 'update_user'
 
   resources :email, only: [:create]
