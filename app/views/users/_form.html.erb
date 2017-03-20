@@ -11,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-lg-4 email-form">
+  <div class="col-lg-7 col-sm-8 email-form">
     <div class="field">
       <%= f.text_field :email, placeholder: "Email", :class => "email" %>
     </div>
@@ -21,14 +21,5 @@
       <%= f.submit 'Enter Now' %>
     </div>
   </div>
-  <div class="col-lg-offset-1 col-lg-5 col-sm-8 facebook-login">
-    <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
-      <span class="fa fa-facebook sign-in-facebook"></span> Or Sign up with Facebook
-    </a>
-  </div>
-</div>
-<div class="t_c home-page-agreement" id="enter-now">
-  <h5 class="home-checkbox-text">I accept the <a class="text-link" href="/rules">Contest Terms and Conditions</a> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
-  <%= f.check_box :terms_conditions, {required: true, checked: false, class: "home-checkbox"}, true, false %>
 </div>
 <% end %>

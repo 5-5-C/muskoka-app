@@ -25,9 +25,8 @@
   </div>
   <div class="col-sm-12">
     <div class="field t_c homepage-bottom-terms">
-      <h5>I accept the  <a class="text-link" href="/rules">Contest Terms and Conditions</a> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
+      <h5 class="home-checkbox-text"><%= f.check_box :opt_in, {required: true, checked: false}, true, false %> Please send me more info on traveling in the wilderness north of Toronto</h5>
       <%#= f.label :terms_of_service %>
-      <%= f.check_box :opt_in, {required: true, checked: false}, true, false %>
     </div>
   </div>
   <% end %>

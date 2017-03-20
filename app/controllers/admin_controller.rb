@@ -20,6 +20,20 @@ class AdminController < ApplicationController
     @admin = Admin.find(params[:id])
   end
 
+  def destroy
+    @entries = Entry.all
+  end
+
+  def destroy_post
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+    @entries = Entry.all
+    respond_to do |format|
+      format.js
+      format.json { render json: {:success => true, html: (render_to_string('_table.html.erb', objects: [@entries], layout: false))} }
+    end
+  end
+
   private
   def admin_params
     params.require(:admin).permit(:name, :story, :image, :filter, :title)
