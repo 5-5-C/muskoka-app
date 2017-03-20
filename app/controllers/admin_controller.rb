@@ -20,6 +20,10 @@ class AdminController < ApplicationController
     @admin = Admin.find(params[:id])
   end
 
+  def destroy
+    @entries = Entry.all
+  end
+
   private
   def admin_params
     params.require(:admin).permit(:name, :story, :image, :filter, :title)
