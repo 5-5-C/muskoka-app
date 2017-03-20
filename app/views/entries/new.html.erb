@@ -80,8 +80,7 @@
 
           </div>
           <div class="field t_c entry-t-c">
-            <h5 class="home-checkbox-text">I accept the <a class="text-link" href="/rules">Contest Terms and Conditions</a> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
-            <%= t.check_box :terms_conditions, {required: true, checked: false}, true, false %>
+            <h5 class="home-checkbox-text"><%= t.check_box :terms_conditions, {required: true, checked: false}, true, false %> I accept the <a class="text-link" href="/rules">Contest Terms and Conditions</a><br><br> <%= t.check_box :terms_conditions, {required: true, checked: false, class: "home-checkbox"}, true, false %> and <a class="text-link" href="/privacy">Privacy Policy</a></h5>
           </div>
         </div>
       </div>
@@ -94,7 +93,7 @@
         <div class="col-md-offset-1 col-md-3 step">
           <h1 class="step-header">UPLOAD YOUR PHOTO</h1>
           <h3>Choose a photo of your favourite Canadian wilderness adventure</h3>
-          <h3>Photo must be larger than 2 megabyes this needs to be changed…</h3>
+          <p>IMPORTANT NOTE: To be eligible, the Photo must: (i) be in one of the following formats: .jpg, .jpeg, .png, or .gif; (ii) be a file that is no larger than 2 MB; and (iii) otherwise comply with these Rules (including, but not limited to, the specific Submission Requirements</p>
           <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
         </div>
         <div class="col-md-4 col-sm-12 photo-column">
