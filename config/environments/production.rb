@@ -27,12 +27,12 @@ Rails.application.configure do
   config.assets.compile = false
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "www.shareyourcanada150.ca" }
+  config.action_mailer.default_url_options = { :host => "www.shareyourcanada150.com" }
   config.action_mailer.smtp_settings = {
     address:              'smtp-relay.gmail.com',
     port:                 587,
     domain:               'www.shareyourcanada150.ca',
-    user_name:            ENV['gmail_username_contest'],
+    user_name:            ENV['gmail_username_admin'],
     password:             ENV['gmail_password'],
     authentication:       'plain',
     enable_starttls_auto: true
